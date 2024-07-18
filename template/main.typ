@@ -25,6 +25,12 @@
   set heading(
     numbering: "1.1 "
   )
+  // Configure correct spacing between headings and headings or paragraphs
+  show heading.where(): h => {
+    v(10pt)
+    h
+    v(15pt)
+  }
 
   // Cover
   cover_page(
