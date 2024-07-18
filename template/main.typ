@@ -51,7 +51,7 @@
   set page(
     numbering: "1",
   )
-  counter(page).update(())
+  counter(page).update(1)
 
   // Main body.
   set par(justify: true)
