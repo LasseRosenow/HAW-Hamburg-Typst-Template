@@ -5,7 +5,6 @@
 = Glossary
 
 #print-glossary((
-  (key: "kuleuven", short: "KU Leuven"),
   (
     key: "freedom", 
     short: "freedom",
