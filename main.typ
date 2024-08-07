@@ -3,13 +3,13 @@
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
 #show: config.with(
-  title: "Towards Gardening",
-  author: "Musterblume",
+  title: "Universal Declaration of Human Rights",
+  author: "United Nations",
   abstract: none,
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
   document-type: none,
-  supervisors: ("Prof. Dr. Musterhummel"),
+  supervisors: ("Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
 )
 
