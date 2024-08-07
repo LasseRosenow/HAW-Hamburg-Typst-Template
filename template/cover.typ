@@ -60,7 +60,17 @@
     stack(
       // Supervision
       if supervisors.len() > 0 {
-        text("Supervision: " + supervisors, font: "New Computer Modern Sans", size: 12pt)
+        text("Supervision: " + supervisors.first(), font: "New Computer Modern Sans", size: 12pt)
+        linebreak()
+
+        if supervisors.len() > 1 {
+          for supervisor in supervisors.slice(1) {
+            text("Supervision: ", font: "New Computer Modern Sans", size: 12pt, fill: rgb(0, 0, 0, 0))
+            text(supervisor, font: "New Computer Modern Sans", size: 12pt)
+            linebreak()
+          }
+          v(2.5mm)
+        }
       },
       v(1.5mm),
     
