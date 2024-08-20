@@ -23,6 +23,7 @@
 // Include chapters of thesis
 #include "chapters/01_preamble.typ"
 #include "chapters/02_article_1.typ"
+#include "chapters/03_article_2.typ"
 
 // Print glossary
 #pagebreak()

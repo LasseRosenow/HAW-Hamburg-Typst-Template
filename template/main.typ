@@ -27,6 +27,9 @@
   )
   // Configure correct spacing between headings and headings or paragraphs
   show heading.where(): h => {
+    if h.level == 1 {
+      pagebreak(weak: true)
+    }
     v(10pt)
     h
     v(15pt)

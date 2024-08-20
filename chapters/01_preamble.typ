@@ -1,6 +1,7 @@
 #import("../dependencies.typ"): *
 
-= Preamble
+// You can add a heading without enumeration like this:
+#heading(numbering: none)[Preamble]
 
 Whereas recognition of the inherent dignity and of the equal and inalienable
 rights of all members of the human family is the foundation of #gls("freedom"), justice
@@ -28,7 +29,7 @@ Now, therefore,
 The General Assembly,
 Proclaims this Universal Declaration of Human Rights as a common standard of
 achievement for all peoples and all nations, to the end that every individual and
-every organ of society, keeping this Declaration constantly in mind, shall strive by 
+every organ of society, keeping this Declaration constantly in mind, shall strive by
 teaching and education to promote respect for these rights and freedoms and by
 progressive measures, national and international, to secure their universal and
 effective recognition and observance, both among the peoples of Member States
