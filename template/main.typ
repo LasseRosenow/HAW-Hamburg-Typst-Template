@@ -1,6 +1,7 @@
 #import "cover.typ": cover_page
 #import "abstract.typ": abstract_page
 #import "outline.typ": outline_page
+#import "declaration_of_independent_processing.typ": declaration_of_independent_processing
 
 #let config(
   title: "",
@@ -11,6 +12,7 @@
   document-type: none,
   supervisors: (),
   submission-date: none,
+  include-declaration-of-independent-processing: false,
   body,
 ) = {
   // Set the document's basic properties.
@@ -66,4 +68,9 @@
   set par(justify: true)
 
   body
+
+  // Declaration of independent processing
+  if include-declaration-of-independent-processing {
+    declaration_of_independent_processing()
+  }
 }
