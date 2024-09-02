@@ -1,7 +1,8 @@
 #let declaration_of_independent_processing() = {
   heading(
-    outlined: false,
+    outlined: true,
     numbering: none,
+    bookmarked: true,
     "Declaration of Independent Processing",
   )
 
