@@ -13,7 +13,7 @@
   document-type: none,
   supervisors: ("Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  pagebreak-per-chapter: true,
+  pagebreak-per-chapter: false,
   include-declaration-of-independent-processing: true,
 )
 
