@@ -12,6 +12,7 @@
   document-type: none,
   supervisors: (),
   submission-date: none,
+  pagebreak-per-chapter: false,
   include-declaration-of-independent-processing: false,
   body,
 ) = {
@@ -29,7 +30,7 @@
   )
   // Configure correct spacing between headings and headings or paragraphs
   show heading.where(): h => {
-    if h.level == 1 {
+    if pagebreak-per-chapter and h.level == 1 {
       pagebreak(weak: true)
     }
     v(10pt)
