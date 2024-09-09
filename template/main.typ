@@ -24,18 +24,59 @@
     number-align: right,
     binding: left,
   )
-  set text(font: "New Computer Modern", lang: "en")
+  set par(leading: 9pt)
+  set text(font: "Latin Modern Roman", lang: "en", size: 10.85pt)
   set heading(
-    numbering: "1.1 "
+    numbering: "1.1", 
   )
   // Configure correct spacing between headings and headings or paragraphs
-  show heading.where(): h => {
-    if pagebreak-per-chapter and h.level == 1 {
-      pagebreak(weak: true)
+  show heading: h => {
+    let top_margin = 0pt   
+    let bottom_margin = 0pt
+    let text_counter = text(counter(heading).display())
+    let text_body = text(h.body)
+
+    if h.level == 1 {
+      text_counter = text(counter(heading).display(), font: "New Computer Modern 08", size: 21pt, weight: 600)
+      text_body = text(h.body, font: "New Computer Modern 08", size: 21pt, weight: 600)
+
+      if pagebreak-per-chapter {
+        // New page if configured
+        pagebreak(weak: true)
+        top_margin = 104pt
+      } else if here().position().y > 90pt {
+        // Only apply this when the header is not at the top of the page
+        top_margin = 20pt
+      }
+
+      bottom_margin = 20pt
+    } else if h.level == 2 {
+      text_counter = text(counter(heading).display(), size: 14pt)
+      text_body = text(h.body, size: 14pt)
+
+      top_margin = 20pt
+      bottom_margin = 20pt
+    } else {
+      text_counter = text(counter(heading).display(), size: 9pt)
+      text_body = text(h.body, size: 10pt)
+
+      top_margin = 20pt
+      bottom_margin = 20pt
     }
-    v(10pt)
-    h
-    v(15pt)
+
+    // Draw headings
+    v(top_margin)
+    if h.numbering != none {
+      grid(
+        columns: 2,
+        gutter: 10pt,
+        text_counter,
+        text_body
+      )
+    } else {
+      text_body
+    }
+    v(bottom_margin)
   }
 
   // Cover
