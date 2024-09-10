@@ -59,7 +59,7 @@
       let level = level_before
 
       if heading_after.location().page() == here().page() {
-        if heading_after.location().position().y == (HEADING_1_TOP_MARGIN + PAGE_MARGIN_TOP) {
+        if heading_after.location().position().y == (HEADING_1_TOP_MARGIN + PAGE_MARGIN_TOP) or heading_after.location().position().y == PAGE_MARGIN_TOP {
           // Next header is first element of page
           return
         } else {
