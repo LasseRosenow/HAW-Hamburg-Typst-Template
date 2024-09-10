@@ -27,10 +27,12 @@
 #include "chapters/02_article_1.typ"
 #include "chapters/03_article_2.typ"
 
+@lkhpg-cwemr-18
+
 // Print glossary
 #pagebreak()
 #include "glossary.typ"
 
 // Print bibliography
 #pagebreak()
-#bibliography("bibliography.bib", style: "ieee")
+#bibliography("bibliography.bib", style: "../../template/ieeetran.csl")
