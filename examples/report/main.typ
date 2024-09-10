@@ -28,9 +28,9 @@
 #include "chapters/03_article_2.typ"
 
 // Print glossary
-#pagebreak()
+#pagebreak(weak: true)
 #include "glossary.typ"
 
 // Print bibliography
-#pagebreak()
+#pagebreak(weak: true)
 #bibliography("bibliography.bib", style: "../../template/ieeetran.csl")
