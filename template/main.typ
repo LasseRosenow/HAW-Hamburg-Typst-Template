@@ -170,3 +170,57 @@
     declaration_of_independent_processing()
   }
 }
+
+#let thesis(
+  title: "",
+  abstract: none,
+  author: "",
+  faculty: "",
+  department: "",
+  document-type: none,
+  supervisors: (),
+  submission-date: none,
+  include-declaration-of-independent-processing: false,
+  body,
+) = {
+  config(
+    title: title,
+    abstract: abstract,
+    author: author,
+    faculty: faculty,
+    department: department,
+    document-type: document-type,
+    supervisors: supervisors,
+    submission-date: submission-date,
+    pagebreak-per-chapter: true,
+    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    body,
+  )
+}
+
+#let report(
+  title: "",
+  abstract: none,
+  author: "",
+  faculty: "",
+  department: "",
+  document-type: none,
+  supervisors: (),
+  submission-date: none,
+  include-declaration-of-independent-processing: false,
+  body,
+) = {
+  config(
+    title: title,
+    abstract: abstract,
+    author: author,
+    faculty: faculty,
+    department: department,
+    document-type: document-type,
+    supervisors: supervisors,
+    submission-date: submission-date,
+    pagebreak-per-chapter: false,
+    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    body,
+  )
+}

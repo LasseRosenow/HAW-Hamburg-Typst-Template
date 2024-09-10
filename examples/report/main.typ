@@ -3,8 +3,8 @@
 
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
-#import "../../template/main.typ": config
-#show: config.with(
+#import "../../template/main.typ": report
+#show: report.with(
   title: "Universal Declaration of Human Rights",
   author: "United Nations",
   abstract: none,
@@ -13,7 +13,6 @@
   document-type: none,
   supervisors: ("Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  pagebreak-per-chapter: false,
   include-declaration-of-independent-processing: true,
 )
 
