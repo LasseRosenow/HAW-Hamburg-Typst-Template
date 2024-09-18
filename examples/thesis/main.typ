@@ -32,4 +32,4 @@
 
 // Print bibliography
 #pagebreak(weak: true)
-#bibliography("bibliography.bib", style: "../../template/ieeetran.csl")
+#bibliography("bibliography.bib", style: "../../template/src/assets/ieeetran.csl")

@@ -20,7 +20,7 @@
     pad(
       top: 5mm,
       right: 8mm,
-      image("assets/logo.svg", width: 192pt)
+      image("../assets/logo.svg", width: 192pt)
     )
   )
 
