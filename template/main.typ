@@ -1,8 +1,3 @@
-#import "cover.typ": cover_page
-#import "abstract.typ": abstract_page
-#import "outline.typ": outline_page
-#import "declaration_of_independent_processing.typ": declaration_of_independent_processing
-
 #let config(
   title: "",
   abstract: none,
@@ -133,6 +128,7 @@
   }
 
   // Cover
+  import "cover.typ": cover_page
   cover_page(
     title: title,
     author: author,
@@ -145,12 +141,14 @@
 
   // Abstract
   if abstract != none {
+    import "abstract.typ": abstract_page
     abstract_page(
       abstract: abstract,
     )
   }
 
   // Table of contents.
+  import "outline.typ": outline_page
   outline_page()
 
   // Reset page numbering and set it to numbers
@@ -167,6 +165,7 @@
   // Declaration of independent processing
   if include-declaration-of-independent-processing {
     pagebreak(weak: true)
+    import "declaration_of_independent_processing.typ": declaration_of_independent_processing
     declaration_of_independent_processing()
   }
 }
