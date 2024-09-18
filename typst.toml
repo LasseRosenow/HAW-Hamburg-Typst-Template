@@ -1,0 +1,9 @@
+[package]
+name = "haw-hamburg"
+version = "0.1.0"
+entrypoint = "template/main.typ"
+authors = ["Lasse Rosenow"]
+# license = "MIT"
+description = "Template for writing a report or thesis in the `HAW Hamburg` corporate design."
+repository = "https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template"
+exclude = ["examples/*"]
