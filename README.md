@@ -4,6 +4,9 @@ This is a template for writing a report or thesis in the HAW Hamburg corporate d
 
 ## How to Use
 
+1. Copy the [template](./template/) folder into your project directory.
+2. Include the `thesis` or `report` function and use it using the following code:
+
 ```typst
 #import "./template/main.typ": thesis, report
 #show: thesis.with(
@@ -35,5 +38,5 @@ These problems can be avoided by following these steps:
 
 Examples can be found inside of the [examples](./examples/) directory
 
-- For Bachelor or Master theses see: [Thesis example](./examples/thesis)
-- For reports see: [Reports example](./examples/report)
+- For Bachelor or Master theses see: [Thesis example](./examples/thesis/)
+- For reports see: [Reports example](./examples/report/)
