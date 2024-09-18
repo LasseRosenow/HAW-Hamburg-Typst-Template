@@ -1,6 +1,6 @@
-# HAW Typst Template
+# HAW Hamburg Typst Template
 
-This is a template for writing a report or thesis in the HAW Hamburg corporate design using `typst`.
+This is a template for writing a report or thesis in the `HAW Hamburg` corporate design using `typst`.
 
 ## How to Use
 
