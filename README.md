@@ -39,4 +39,4 @@ These problems can be avoided by following these steps:
 Examples can be found inside of the [examples](./examples/) directory
 
 - For Bachelor or Master theses see: [Thesis example](./examples/thesis/)
-- For reports see: [Reports example](./examples/report/)
+- For reports see: [Report example](./examples/report/)
