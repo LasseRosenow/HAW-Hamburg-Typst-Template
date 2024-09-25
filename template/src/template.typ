@@ -152,8 +152,6 @@
     is-bachelor-thesis: is-bachelor-thesis,
     is-report: is-report,
 
-    language: "en",
-
     title: title,
     author: author,
     faculty: faculty,
@@ -168,6 +166,7 @@
     import "pages/abstract.typ": abstract_page
     if (language == "en") {
       abstract_page(
+        language: "en",
         author: author,
         title: title_en,
         keywords: keywords_en,
@@ -175,6 +174,7 @@
       )
     }
     abstract_page(
+      language: "de",
       author: author,
       title: title_de,
       keywords: keywords_de,

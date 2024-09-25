@@ -6,8 +6,6 @@
   is-bachelor-thesis: true,
   is-report: false,
 
-  language: "en",
-
   title: "",
   author: "",
   faculty: "",
@@ -39,9 +37,9 @@
     stack(
       // Type
       if is-thesis {
-        let thesis-title = translations.bachelor-thesis.at(language)
+        let thesis-title = translations.bachelor-thesis
         if is-master-thesis {
-          thesis-title = translations.master-thesis.at(language)
+          thesis-title = translations.master-thesis
         }
         upper(text(thesis-title, size: 9pt, weight: "bold"))
         v(2mm)
@@ -58,10 +56,10 @@
       line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
       v(12mm),
       // Faculty
-      text("Faculty of " + faculty, size: 10pt, weight: "bold"),
+      text(translations.faculty-of + " " + faculty, size: 10pt, weight: "bold"),
       v(2mm),
       // Department
-      text("Department " + department, size: 10pt),
+      text(translations.department-of + " " + department, size: 10pt),
     )
   )
 
@@ -122,11 +120,16 @@
       // Content
       stack(
         spacing: 3mm,
-        text("Bachelor thesis submitted for examination in Bachelor´s degree"),
-        text("in the study course " + study-course),
-        text("at the Department " + department),
-        text("at the Faculty of " + faculty),
-        text("at University of Applied Science Hamburg"),
+        if is-bachelor-thesis {
+          text(translations.bachelor-thesis-submitted-for-examination-in-bachelors-degree)
+        },
+        if is-master-thesis {
+          text(translations.master-thesis-submitted-for-examination-in-masters-degree)
+        },
+        text(translations.in-the-study-course + " " + text(study-course, style: "italic")),
+        text(translations.at-the-department + " " + department),
+        text(translations.at-the-faculty-of + " " + faculty),
+        text(translations.at-university-of-applied-science-hamburg),
       ),
 
       v(4mm),
@@ -136,13 +139,13 @@
       // Supervision
       if supervisors.len() > 0 {
         if type(supervisors) != array {
-          text("Supervising examiner: " + text(upper(supervisors), weight: "bold"), size: 10pt)
+          text(translations.supervising-examiner + ": " + text(upper(supervisors), weight: "bold"), size: 10pt)
         } else {
-          text("Supervising examiner: " + text(upper(supervisors.first()), weight: "bold"), size: 10pt)
+          text(translations.supervising-examiner + ": " + text(upper(supervisors.first()), weight: "bold"), size: 10pt)
 
           if supervisors.len() > 1 {
             linebreak()
-            text("Second examiner: " + text(upper(supervisors.at(1)), weight: "bold"), size: 10pt)
+            text(translations.second-examiner + ": " + text(upper(supervisors.at(1)), weight: "bold"), size: 10pt)
           }
         }
       },
@@ -154,7 +157,7 @@
           line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
           v(4mm),
           text(
-            "Submitted: " + submission-date.display("[day]. [month repr:long] [year]"),
+            translations.submitted + ": " + submission-date.display("[day]. [month repr:long] [year]"),
             size: 10pt,
           ),
         )
