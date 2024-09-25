@@ -5,7 +5,7 @@
 // to customize this template and discover how it works.
 #import "../../template/main.typ": master-thesis
 #show: master-thesis.with(
-  language: "de",
+  language: "en",
 
   title_de: "Antwort auf die endgültige Frage nach dem Leben, dem Universum und dem ganzen Rest",
   keywords_de: ("Leben", "Universum", "Alles"),
