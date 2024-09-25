@@ -10,7 +10,7 @@
   abstract: none,
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  document-type: none,
+  document-type: "Masterthesis",
   supervisors: ("Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
   include-declaration-of-independent-processing: true,

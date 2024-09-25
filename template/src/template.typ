@@ -1,9 +1,21 @@
 #let template(
-  title: "",
-  abstract: none,
+  is_thesis: true,
+  is_report: false,
+
+  language: "en",
+
+  title_de: "",
+  keywords_de: none,
+  abstract_de: none,
+
+  title_en: none,
+  keywords_en: none,
+  abstract_en: none,
+
   author: "",
   faculty: "",
   department: "",
+  study-course: "",
   document-type: none,
   supervisors: (),
   submission-date: none,
@@ -11,12 +23,17 @@
   include-declaration-of-independent-processing: false,
   body,
 ) = {
-  let HEADING_1_TOP_MARGIN = if pagebreak-per-chapter {
+  let HEADING_1_TOP_MARGIN = if is_thesis {
     104pt
   } else {
     20pt
   }
   let PAGE_MARGIN_TOP = 37mm
+
+  let title = title_de
+  if language == "en" {
+    title = title_en
+  }
 
   // Set the document's basic properties.
   set document(author: author, title: title, date: submission-date)
@@ -134,16 +151,18 @@
     author: author,
     faculty: faculty,
     department: department,
+    study-course: study-course,
     document-type: document-type,
     supervisors: supervisors,
     submission-date: submission-date,
   )
 
   // Abstract
-  if abstract != none {
+  if abstract_de != none or abstract_en != none {
     import "pages/abstract.typ": abstract_page
     abstract_page(
-      abstract: abstract,
+      abstract_de: abstract_de,
+      abstract_en: abstract_en,
     )
   }
 

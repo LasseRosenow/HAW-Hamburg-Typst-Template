@@ -1,5 +1,6 @@
 #let abstract_page(
-  abstract: ""
+  abstract_de: "",
+  abstract_en: "",
 ) = {
   set page(
     margin: (left: 25mm, right: 25mm, top: 30mm, bottom: 30mm),
@@ -16,7 +17,7 @@
       text(0.85em, smallcaps[Abstract]),
     )
     
-    #abstract
+    #abstract_de
   ]
   
   v(1.618fr)

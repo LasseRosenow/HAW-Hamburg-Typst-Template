@@ -1,6 +1,6 @@
 # HAW Hamburg Typst Template
 
-This is an **`unofficial`** template for writing a report or thesis in the `HAW Hamburg` corporate design using [Typst](https://github.com/typst/typst).
+This is an **`unofficial`** template for writing a report or thesis in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
 
 ## How to Use
 
