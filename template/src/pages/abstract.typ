@@ -1,24 +1,41 @@
 #let abstract_page(
-  abstract_de: "",
-  abstract_en: "",
+  author: "",
+  title: "",
+  keywords: (),
+  abstract: "",
 ) = {
   set page(
-    margin: (left: 25mm, right: 25mm, top: 30mm, bottom: 30mm),
-    numbering: "1",
-    number-align: center,
+    margin: (left: 31.5mm, right: 31.5mm, top: 37mm, bottom: 56mm),
+    numbering: "i",
+    number-align: right,
   )
-  
-  v(1fr)
-  
-  align(center)[
-    #heading(
-      outlined: false,
-      numbering: none,
-      text(0.85em, smallcaps[Abstract]),
-    )
-    
-    #abstract_de
-  ]
-  
-  v(1.618fr)
+
+  let custom_title(title) = {
+    text(title, weight: "bold")
+  }
+
+  set par(justify: true)
+
+  stack(
+    spacing: 10mm,
+    custom_title(author),
+
+    v(9mm),
+
+    custom_title("Title of thesis"),
+    v(6mm),
+    text(title),
+
+    v(9mm),
+
+    custom_title("Keywords"),
+    v(6mm),
+    text(keywords.join(", ")),
+
+    v(9mm),
+
+    custom_title("Abstract"),
+    v(6mm),
+    text(abstract),
+  )
 }

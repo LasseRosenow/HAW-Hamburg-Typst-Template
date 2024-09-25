@@ -1,10 +1,18 @@
+#import "../translations.typ": translations
+
 #let cover_page(
+  is-thesis: true,
+  is-master-thesis: false,
+  is-bachelor-thesis: true,
+  is-report: false,
+
+  language: "en",
+
   title: "",
   author: "",
   faculty: "",
   department: "",
   study-course: "",
-  document-type: none,
   supervisors: (),
   submission-date: none,
 ) = {
@@ -30,8 +38,12 @@
     right: 18mm,
     stack(
       // Type
-      if document-type != none {
-        upper(text(document-type, size: 9pt, weight: "bold"))
+      if is-thesis {
+        let thesis-title = translations.bachelor-thesis.at(language)
+        if is-master-thesis {
+          thesis-title = translations.master-thesis.at(language)
+        }
+        upper(text(thesis-title, size: 9pt, weight: "bold"))
         v(2mm)
       },
       // Author
@@ -74,69 +86,79 @@
     )
   )
 
-  // Second cover page
-  pagebreak()
+  if is-thesis {
+    // Second cover page
+    pagebreak()
 
-  // Set the document's basic properties.
-  set page(
-    margin: (left: 31.5mm, right: 32mm, top: 66mm, bottom: 67mm),
-    numbering: none,
-    number-align: center,
-  )
-
-  // Title etc.
-  stack(
-    // Author
-    upper(text(author, size: 10pt, weight: "bold")),
-    v(13mm),
-    // Title
-    par(
-      leading: 13pt,
-      text(title, size: 23.3pt, weight: 900, font: ""),
-    ),
-    v(5mm),
-    line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
-    v(12mm),
-    
-    // Content
-    stack(
-      spacing: 3mm,
-      text("Bachelor thesis submitted for examination in Bachelor´s degree"),
-      text("in the study course " + study-course),
-      text("at the Department " + department),
-      text("at the Faculty of " + faculty),
-      text("at University of Applied Science Hamburg"),
+    // Set the document's basic properties.
+    set page(
+      margin: (left: 31.5mm, right: 32mm, top: 55mm, bottom: 67mm),
+      numbering: none,
+      number-align: center,
     )
-  )
 
-  v(1fr)
-
-  // Supervision
-  stack(
-    if supervisors.len() > 0 {
-      if type(supervisors) != array {
-        text("Supervising examiner: " + text(upper(supervisors), weight: "bold"), size: 10pt)
-      } else {
-        text("Supervising examiner: " + text(upper(supervisors.first()), weight: "bold"), size: 10pt)
-
-        if supervisors.len() > 1 {
-          linebreak()
-          text("Second examiner: " + text(upper(supervisors.at(1)), weight: "bold"), size: 10pt)
-        }
-      }
-    },
-  
-    // Submission date
-    if submission-date != none {
-      stack(
-        v(4mm),
-        line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
-        v(4mm),
-        text(
-          "Submitted: " + submission-date.display("[day]. [month repr:long] [year]"),
-          size: 10pt,
+    // Title etc.
+    stack(
+      // Author
+      align(
+        center,
+        text(author, size: 14pt, font: "Open Sans"),
+      ),
+      v(23mm),
+      // Title
+      align(
+        center,
+        par(
+          leading: 13pt,
+          text(title, size: 18pt, font: "Open Sans"),
         ),
-      )
-    },
-  )
+      ),
+      v(22mm),
+    )
+
+    v(1fr)
+
+    stack(
+      // Content
+      stack(
+        spacing: 3mm,
+        text("Bachelor thesis submitted for examination in Bachelor´s degree"),
+        text("in the study course " + study-course),
+        text("at the Department " + department),
+        text("at the Faculty of " + faculty),
+        text("at University of Applied Science Hamburg"),
+      ),
+
+      v(4mm),
+      line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
+      v(4mm),
+
+      // Supervision
+      if supervisors.len() > 0 {
+        if type(supervisors) != array {
+          text("Supervising examiner: " + text(upper(supervisors), weight: "bold"), size: 10pt)
+        } else {
+          text("Supervising examiner: " + text(upper(supervisors.first()), weight: "bold"), size: 10pt)
+
+          if supervisors.len() > 1 {
+            linebreak()
+            text("Second examiner: " + text(upper(supervisors.at(1)), weight: "bold"), size: 10pt)
+          }
+        }
+      },
+    
+      // Submission date
+      if submission-date != none {
+        stack(
+          v(4mm),
+          line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
+          v(4mm),
+          text(
+            "Submitted: " + submission-date.display("[day]. [month repr:long] [year]"),
+            size: 10pt,
+          ),
+        )
+      },
+    )
+  }
 }

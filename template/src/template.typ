@@ -1,6 +1,8 @@
 #let template(
-  is_thesis: true,
-  is_report: false,
+  is-thesis: true,
+  is-master-thesis: false,
+  is-bachelor-thesis: true,
+  is-report: false,
 
   language: "en",
 
@@ -16,14 +18,12 @@
   faculty: "",
   department: "",
   study-course: "",
-  document-type: none,
   supervisors: (),
   submission-date: none,
-  pagebreak-per-chapter: false,
   include-declaration-of-independent-processing: false,
   body,
 ) = {
-  let HEADING_1_TOP_MARGIN = if is_thesis {
+  let HEADING_1_TOP_MARGIN = if is-thesis {
     104pt
   } else {
     20pt
@@ -90,7 +90,7 @@
     }
   )
   set par(leading: 9pt)
-  set text(font: "Latin Modern Roman", lang: "en", size: 10.85pt)
+  set text(font: "Latin Modern Roman", lang: language, size: 10.85pt)
   set heading(
     numbering: "1.1", 
   )
@@ -105,7 +105,7 @@
       text_counter = text(counter(heading).display(), font: "New Computer Modern 08", size: 21pt, weight: 600)
       text_body = text(h.body, font: "New Computer Modern 08", size: 21pt, weight: 600)
 
-      if pagebreak-per-chapter {
+      if is-thesis {
         // New page if configured
         pagebreak(weak: true)
         top_margin = HEADING_1_TOP_MARGIN
@@ -147,12 +147,18 @@
   // Cover
   import "pages/cover.typ": cover_page
   cover_page(
+    is-thesis: is-thesis,
+    is-master-thesis: is-master-thesis,
+    is-bachelor-thesis: is-bachelor-thesis,
+    is-report: is-report,
+
+    language: "en",
+
     title: title,
     author: author,
     faculty: faculty,
     department: department,
     study-course: study-course,
-    document-type: document-type,
     supervisors: supervisors,
     submission-date: submission-date,
   )
@@ -160,9 +166,19 @@
   // Abstract
   if abstract_de != none or abstract_en != none {
     import "pages/abstract.typ": abstract_page
+    if (language == "en") {
+      abstract_page(
+        author: author,
+        title: title_en,
+        keywords: keywords_en,
+        abstract: abstract_en,
+      )
+    }
     abstract_page(
-      abstract_de: abstract_de,
-      abstract_en: abstract_en,
+      author: author,
+      title: title_de,
+      keywords: keywords_de,
+      abstract: abstract_de,
     )
   }
 

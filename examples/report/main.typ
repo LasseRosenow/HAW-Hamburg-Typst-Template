@@ -5,14 +5,11 @@
 // to customize this template and discover how it works.
 #import "../../template/main.typ": report
 #show: report.with(
+  language: "en",
   title: "Universal Declaration of Human Rights",
-  author: "United Nations",
-  abstract: none,
+  author:"United Nations",
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  document-type: none,
-  supervisors: ("Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
   include-declaration-of-independent-processing: true,
 )
 
