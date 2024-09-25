@@ -5,19 +5,16 @@ This is an **`unofficial`** template for writing a report or thesis in the `HAW 
 ## How to Use
 
 1. Copy the [template](./template/) folder into your project directory.
-2. Include the `thesis` or `report` function and use it using the following code:
+2. Include the `bachelor-thesis`, `master-thesis` or `report` function and use it using the following code:
 
 ```typst
 #import "./template/main.typ": thesis, report
-#show: thesis.with(
+#show: report.with(
+  language: "en",
   title: "Universal Declaration of Human Rights",
-  author: "United Nations",
-  abstract: none,
+  author:"United Nations",
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  document-type: none,
-  supervisors: ("Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
   include-declaration-of-independent-processing: true,
 )
 ```
@@ -38,5 +35,6 @@ These problems can be avoided by following these steps:
 
 Examples can be found inside of the [examples](./examples/) directory
 
-- For Bachelor or Master theses see: [Thesis example](./examples/thesis/)
+- For Bachelor  theses see: [Bachelor thesis example](./examples/bachelor-thesis/)
+- For Master theses see: [Master thesis example](./examples/master-thesis/)
 - For reports see: [Report example](./examples/report/)
