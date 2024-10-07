@@ -39,7 +39,7 @@
   set document(author: author, title: title, date: submission-date)
   set page(
     margin: (left: 31.5mm, right: 31.5mm, top: PAGE_MARGIN_TOP, bottom: 56mm),
-    numbering: "i",
+    numbering: "1",
     number-align: right,
     binding: left,
     header-ascent: 24pt,

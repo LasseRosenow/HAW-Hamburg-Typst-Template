@@ -5,10 +5,9 @@
   keywords: (),
   abstract: "",
 ) = {
+  // TODO Needed, because context creates empty pages with wrong numbering
   set page(
-    margin: (left: 31.5mm, right: 31.5mm, top: 37mm, bottom: 56mm),
     numbering: "i",
-    number-align: right,
   )
 
   let custom_title(title) = {

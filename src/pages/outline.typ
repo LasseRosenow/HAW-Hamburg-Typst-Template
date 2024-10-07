@@ -80,11 +80,15 @@
 }
 
 #let outline_page() = {
+  // TODO Needed, because context creates empty pages with wrong numbering
+  set page(
+    numbering: "i",
+  )
+  
   show outline.entry: show-entry
   outline(
     depth: 3,
     indent: true,
     fill: repeat(text(". ")),
   )
-  pagebreak()
 }
