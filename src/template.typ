@@ -186,6 +186,21 @@
   import "pages/outline.typ": outline_page
   outline_page()
 
+  // List of Figures
+  if is-thesis {
+    include "pages/list_of_figures.typ"
+  }
+
+  // List of Tables
+  if is-thesis {
+    include "pages/list_of_tables.typ"
+  }
+
+  // Listings
+  if is-thesis {
+    include "pages/listings.typ"
+  }
+
   // Reset page numbering and set it to numbers
   set page(
     numbering: "1",
@@ -204,6 +219,3 @@
     declaration_of_independent_processing()
   }
 }
-
-
-

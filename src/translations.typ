@@ -63,10 +63,6 @@
     de: "der Hochschule für Angewandte Wissenschaften Hamburg"
   ),
 
-
-
-
-
   supervising-examiner: value(
     en: "Supervising examiner",
     de: "Betreuender Prüfer",
@@ -80,6 +76,21 @@
   submitted: value(
     en: "Submitted",
     de: "Eingereicht am",
+  ),
+
+  list-of-figures: value(
+    en: "List of Figures",
+    de: "Abbildungsverzeichnis"
+  ),
+
+  list-of-tables: value(
+    en: "List of Tables",
+    de: "Tabellenverzeichnis"
+  ),
+
+  listings: value(
+    en: "Listings",
+    de: "Listings"
   ),
 
   declaration-of-independent-processing: value(
