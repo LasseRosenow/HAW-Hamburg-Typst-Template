@@ -1,132 +1,47 @@
-#let report(
-  language: "en",
-  title: "",
-  author: "",
-  faculty: "",
-  department: "",
-  include-declaration-of-independent-processing: false,
-  body,
-) = {
-  import "src/template.typ": template
-  template(
-    is-thesis: false,
-    is-master-thesis: false,
-    is-bachelor-thesis: false,
-    is-report: true,
+#import "@preview/haw-hamburg:0.1.0": bachelor-thesis
+#import "dependencies.typ": *
 
-    language: language,
-    
-    title-de: title,
-    keywords-de: none,
-    abstract-de: none,
-
-    title-en: title,
-    keywords-en: none,
-    abstract-en: none,
-
-    author: author,
-    faculty: faculty,
-    department: department,
-    study-course: none,
-    supervisors: (),
-    submission-date: none,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
-    body,
-  )
-}
-
-#let bachelor-thesis(
+// Take a look at the file `template.typ` in the file panel
+// to customize this template and discover how it works.
+#show: bachelor-thesis.with(
   language: "en",
 
-  title-de: "",
-  keywords-de: none,
-  abstract-de: none,
+  title-de: "Antwort auf die endgültige Frage nach dem Leben, dem Universum und dem ganzen Rest",
+  keywords-de: ("Leben", "Universum", "Alles"),
+  abstract-de: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida mauris. Nam arcu lib
+ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
-  title-en: none,
-  keywords-en: none,
-  abstract-en: none,
+  title-en: "Answer to the Ultimate Question of Life, the Universe, and Everything",
+  keywords-en:  ("Live", "Universe", "Everything"),
+  abstract-en: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida mauris. Nam arcu lib
+ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
-  author: "",
-  faculty: "",
-  department: "",
-  study-course: "",
-  supervisors: (),
-  submission-date: none,
+  author: "The Computer",
+  faculty: "Engineering and Computer Science",
+  department: "Computer Science",
+  study-course: "Bachelor of Science Informatik Technischer Systeme",
+  supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
+  submission-date: datetime(year: 1948, month: 12, day: 10),
   include-declaration-of-independent-processing: true,
-  body,
-) = {
-  import "src/template.typ": template
-  template(
-    is-thesis: true,
-    is-master-thesis: false,
-    is-bachelor-thesis: true,
-    is-report: false,
+)
 
-    language: language,
+// Enable glossary
+// Use: #gls("key") or #glspl("key") to reference and #print-glossary to print it
+// More documentation: https://typst.app/universe/package/glossarium/
+#show: make-glossary
 
-    title-de: title-de,
-    keywords-de: keywords-de,
-    abstract-de: abstract-de,
+// Include chapters of thesis
+#include "chapters/01_introduction.typ"
+#include "chapters/02_background.typ"
 
-    title-en: title-en,
-    keywords-en: keywords-en,
-    abstract-en: abstract-en,
+// Print glossary
+#pagebreak(weak: true)
+#include "glossary.typ"
 
-    author: author,
-    faculty: faculty,
-    department: department,
-    study-course: study-course,
-    supervisors: supervisors,
-    submission-date: submission-date,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
-    body,
-  )
-}
-
-#let master-thesis(
-  language: "en",
-
-  title-de: "",
-  keywords-de: none,
-  abstract-de: none,
-
-  title-en: none,
-  keywords-en: none,
-  abstract-en: none,
-
-  author: "",
-  faculty: "",
-  department: "",
-  study-course: "",
-  supervisors: (),
-  submission-date: none,
-  include-declaration-of-independent-processing: true,
-  body,
-) = {
-  import "src/template.typ": template
-  template(
-    is-thesis: true,
-    is-master-thesis: true,
-    is-bachelor-thesis: false,
-    is-report: false,
-
-    language: language,
-
-    title-de: title-de,
-    keywords-de: keywords-de,
-    abstract-de: abstract-de,
-
-    title-en: title-en,
-    keywords-en: keywords-en,
-    abstract-en: abstract-en,
-
-    author: author,
-    faculty: faculty,
-    department: department,
-    study-course: study-course,
-    supervisors: supervisors,
-    submission-date: submission-date,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
-    body,
-  )
-}
+// Print bibliography
+#pagebreak(weak: true)
+#bibliography("bibliography.bib", style: "ieeetran.csl")

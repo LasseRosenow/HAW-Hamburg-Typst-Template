@@ -3,7 +3,7 @@
 
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
-#import "../../template/main.typ": master-thesis
+#import "../../src/lib.typ": master-thesis
 #show: master-thesis.with(
   language: "en",
 
@@ -46,4 +46,4 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
 // Print bibliography
 #pagebreak(weak: true)
-#bibliography("bibliography.bib", style: "../../template/src/assets/ieeetran.csl")
+#bibliography("bibliography.bib", style: "../../src/assets/ieeetran.csl")
