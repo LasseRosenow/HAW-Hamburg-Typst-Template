@@ -40,17 +40,6 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 #include "chapters/02_article_1.typ"
 #include "chapters/03_article_2.typ"
 
-
-
-#figure(
-  caption: "lol",
-```rust
-fn main() {
-    println!("Hello World!");
-}
-```
-)
-
 // Print glossary
 #pagebreak(weak: true)
 #include "glossary.typ"
