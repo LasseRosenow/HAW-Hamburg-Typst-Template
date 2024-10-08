@@ -37,8 +37,7 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
 // Include chapters of thesis
 #include "chapters/01_preamble.typ"
-#include "chapters/02_article_1.typ"
-#include "chapters/03_article_2.typ"
+#include "chapters/02_articles.typ"
 
 // Print glossary
 #pagebreak(weak: true)
