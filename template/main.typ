@@ -34,7 +34,12 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 // More documentation: https://typst.app/universe/package/glossarium/
 #show: make-glossary
 
+// Print abbreviations
+#pagebreak(weak: true)
+#include "abbreviations.typ"
+
 // Include chapters of thesis
+#pagebreak(weak: true)
 #include "chapters/01_introduction.typ"
 #include "chapters/02_background.typ"
 

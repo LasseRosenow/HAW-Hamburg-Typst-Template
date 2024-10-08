@@ -18,7 +18,12 @@
 // More documentation: https://typst.app/universe/package/glossarium/
 #show: make-glossary
 
-// Include chapters of thesis
+// Print abbreviations
+#pagebreak(weak: true)
+#include "abbreviations.typ"
+
+// Include chapters of report
+#pagebreak(weak: true)
 #include "chapters/01_preamble.typ"
 #include "chapters/02_articles.typ"
 

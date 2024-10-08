@@ -14,4 +14,4 @@
 
 #register-glossary(entry-list)
 
-#print-glossary(entry-list)
+#print-glossary(entry-list, disable-back-references: true)
