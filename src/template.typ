@@ -84,8 +84,8 @@
       grid(
         rows: 2,
         gutter: 5pt,
-        if level.display() != "0" { 
-        emph(level.display() + " " + heading.body)
+        if heading.numbering != none { 
+          emph(level.display() + " " + heading.body)
         } else {
           emph(heading.body)
         },
