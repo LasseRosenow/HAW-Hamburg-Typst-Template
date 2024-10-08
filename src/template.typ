@@ -84,8 +84,12 @@
       grid(
         rows: 2,
         gutter: 5pt,
-        emph(level.display() + " " + heading.body),
-        line(length: 100%, stroke: 0.7pt)
+        if level.display() != "0" { 
+        emph(level.display() + " " + heading.body)
+        } else {
+          emph(heading.body)
+        },
+        line(length: 100%, stroke: 0.7pt),
       )
     }
   )
