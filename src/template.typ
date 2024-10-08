@@ -94,7 +94,7 @@
     }
   )
   set par(leading: 9pt)
-  set text(font: "Latin Modern Roman", lang: language, size: 10.85pt)
+  set text(font: "New Computer Modern", lang: language, size: 10.85pt)
   set heading(
     numbering: "1.1", 
   )
