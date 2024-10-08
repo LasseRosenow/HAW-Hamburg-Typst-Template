@@ -4,7 +4,12 @@ This is an **`unofficial`** template for writing a report or thesis in the `HAW 
 
 ## Usage
 
-To use this package, simply add the following code to your document:
+To use this package first install the following fonts:
+
+- New Computer Modern
+- Latin Modern Roman
+
+Then add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ### Report
 
