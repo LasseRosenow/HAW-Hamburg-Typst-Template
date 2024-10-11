@@ -36,7 +36,7 @@ def write_toml(data, path):
             first_row = False
 
 
-def make_package(dst: str, src: str):
+def make_package(src: str, dst: str):
     base_config = read_toml("typst.toml")
     version = base_config["package"]["version"]
 
@@ -44,7 +44,7 @@ def make_package(dst: str, src: str):
     name = package_config["package"]["name"]
 
     # Copy files to output folder
-    shutil.copytree(src="./lib", dst=f"{dst}/{name}/{version}")
+    shutil.copytree(src=src, dst=f"{dst}/{name}/{version}")
 
     # Merge base_config with package_config
     merged_config = package_config
@@ -62,9 +62,9 @@ if os.path.exists(f"./{OUTPUT_DIR}"):
 os.mkdir(OUTPUT_DIR)
 
 # Generate main lib
-make_package(OUTPUT_DIR, LIB_DIR)
+make_package(LIB_DIR, OUTPUT_DIR)
 
 # Generate templates
 dirs = os.listdir(TEMPLATES_DIR)
 for dir in dirs:
-    make_package(OUTPUT_DIR, f"{TEMPLATES_DIR}/{dir}")
+    make_package(f"{TEMPLATES_DIR}/{dir}", OUTPUT_DIR)
