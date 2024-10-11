@@ -1,0 +1,10 @@
+[package]
+name = "haw-hamburg-bachelor-thesis"
+entrypoint = "lib.typ"
+description = "Unofficial template for writing a bachelor-thesis in the HAW Hamburg department of Computer Science design."
+categories = ["thesis"]
+
+[template]
+path = "src"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"

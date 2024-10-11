@@ -1,0 +1,10 @@
+[package]
+name = "haw-hamburg-master-thesis"
+entrypoint = "lib.typ"
+description = "Unofficial template for writing a master-thesis in the HAW Hamburg department of Computer Science design."
+categories = ["thesis"]
+
+[template]
+path = "src"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
