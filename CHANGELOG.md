@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Fixed documentation pointing to an outdated version of the template
+
 ## 0.2.0
 
 - Improved Readme documentation around fonts

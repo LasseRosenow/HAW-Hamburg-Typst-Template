@@ -2,7 +2,7 @@
 
 This is an **`unofficial`** template for writing a report or thesis in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
 
-## Required fonts
+## Required Fonts
 
 To correctly render this template please make sure that the `New Computer Modern` font is installed on your system.
 
@@ -13,7 +13,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.1.0": report
+#import "@preview/haw-hamburg:0.2.1": report
 
 #show: report.with(
   language: "en",
@@ -28,7 +28,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Bachelor Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.1.0": bachelor-thesis
+#import "@preview/haw-hamburg:0.2.1": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -54,7 +54,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Master Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.1.0": master-thesis
+#import "@preview/haw-hamburg:0.2.1": master-thesis
 
 #show: master-thesis.with(
   language: "en",
