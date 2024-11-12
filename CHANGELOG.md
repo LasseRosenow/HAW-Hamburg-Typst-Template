@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1
+
+- Fix typst 0.12 compatibility
+- Update glossarium to 0.5.1
+
 ## 0.3.0
 
 - Fixed documentation pointing to an outdated version of the template

@@ -1,5 +1,5 @@
 [package]
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Lasse Rosenow"]
 license = "MIT"
 repository = "https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template"
