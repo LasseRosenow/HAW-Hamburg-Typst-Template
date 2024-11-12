@@ -13,7 +13,7 @@
 )
 
 // Enable glossary
-// Use: #gls("key") or #glspl("key") to reference and #print-glossary to print it
+// Use: @key or @key:pl to reference and #print-glossary to print it
 // More documentation: https://typst.app/universe/package/glossarium/
 #show: make-glossary
 #import "glossary.typ": glossary-entry-list

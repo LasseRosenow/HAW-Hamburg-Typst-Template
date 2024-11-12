@@ -1,12 +1,3 @@
-#let align-helper(state-key, what-to-measure, display) = style(styles => {
-  let max-width = state(state-key, 0pt)
-  let this-width = measure(what-to-measure, styles).width
-  max-width.update(max => calc.max(this-width, max))
-  locate(loc => {
-    display(max-width.final(loc), this-width)
-  })
-})
-
 #let presets = (
   // outrageous preset for a Table of Contents
   outrageous-toc: (
@@ -58,24 +49,12 @@
       fields.page = if new-page == none { entry.page } else { new-page }
     }
 
-    if fill in (none, auto) or not fill-align {
-      if fill != auto {
-        fields.fill = if fill == none { none } else {
-          box(width: 100% - fill-right-pad, fill)
-        }
+    if fill != auto {
+      fields.fill = if fill == none { none } else {
+        box(width: 100% - fill-right-pad, fill)
       }
-      [#outline.entry(..fields.values()) #label]
-    } else {
-      align-helper(
-        state-key,
-        entry.page,
-        (max-width, this-width) => {
-          let fields = fields
-          fields.fill = box(width: 100% - (max-width - this-width) - fill-right-pad, fill)
-          [#outline.entry(..fields.values()) #label]
-        }
-      )
     }
+    [#outline.entry(..fields.values()) #label]
   }
 }
 
