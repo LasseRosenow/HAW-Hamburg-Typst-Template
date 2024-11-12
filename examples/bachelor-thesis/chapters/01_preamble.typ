@@ -5,8 +5,10 @@
 
 Example abbreviation: @cpu.
 
+Example abbreviation plural: @cpu:pl.
+
 Whereas recognition of the inherent dignity and of the equal and inalienable
-rights of all members of the human family is the foundation of #gls("freedom"), justice
+rights of all members of the human family is the foundation of @freedom, justice
 and peace in the world,
 Whereas disregard and contempt for human rights have resulted in barbarous
 acts which have outraged the conscience of mankind, and the advent of a world

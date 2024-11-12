@@ -33,10 +33,15 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 // Use: #gls("key") or #glspl("key") to reference and #print-glossary to print it
 // More documentation: https://typst.app/universe/package/glossarium/
 #show: make-glossary
+#import "glossary.typ": glossary-entry-list
+#import "abbreviations.typ": abbreviations-entry-list
+#register-glossary(glossary-entry-list)
+#register-glossary(abbreviations-entry-list)
 
 // Print abbreviations
 #pagebreak(weak: true)
-#include "abbreviations.typ"
+#heading("Abbreviations", numbering: none)
+#print-glossary(abbreviations-entry-list, disable-back-references: true)
 
 // Include chapters of thesis
 #pagebreak(weak: true)
@@ -45,7 +50,8 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
 // Print glossary
 #pagebreak(weak: true)
-#include "glossary.typ"
+#heading("Glossary", numbering: none)
+#print-glossary(glossary-entry-list, disable-back-references: true)
 
 // Print bibliography
 #pagebreak(weak: true)
