@@ -3,7 +3,7 @@
 
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
-#import "../../src/lib.typ": report
+#import "../../lib/lib.typ": report
 #show: report.with(
   language: "en",
   title: "Universal Declaration of Human Rights",
@@ -33,4 +33,4 @@
 
 // Print bibliography
 #pagebreak(weak: true)
-#bibliography("bibliography.bib", style: "../../src/assets/ieeetran.csl")
+#bibliography("bibliography.bib", style: "../../lib/assets/ieeetran.csl")
