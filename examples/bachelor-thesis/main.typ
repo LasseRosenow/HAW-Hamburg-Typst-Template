@@ -31,18 +31,19 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 )
 
 // Enable glossary
-// Use: @key or @key:pl to reference and #print-glossary to print it
-// More documentation: https://typst.app/universe/package/glossarium/
-#show: make-glossary
-#import "glossary.typ": glossary-entry-list
+// Use: @key or @key:pl to reference
+// More documentation: https://typst.app/universe/package/glossy
 #import "abbreviations.typ": abbreviations-entry-list
-#register-glossary(glossary-entry-list)
-#register-glossary(abbreviations-entry-list)
+#import "glossary.typ": glossary-entry-list
+#show: init-glossary.with(abbreviations-entry-list)
+#show: init-glossary.with(glossary-entry-list)
 
 // Print abbreviations
 #pagebreak(weak: true)
-#heading("Abbreviations", numbering: none)
-#print-glossary(abbreviations-entry-list, disable-back-references: true)
+#{
+  set heading(numbering: none)
+  glossary(title: "Abbreviations", groups: "Abbreviations")
+}
 
 // Include chapters of report
 #pagebreak(weak: true)
@@ -51,8 +52,10 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
 // Print glossary
 #pagebreak(weak: true)
-#heading("Glossary", numbering: none)
-#print-glossary(glossary-entry-list, disable-back-references: true)
+#{
+  set heading(numbering: none)
+  glossary(title: "Glossary", groups: "")
+}
 
 // Print bibliography
 #pagebreak(weak: true)

@@ -1,5 +1,3 @@
-#import("../dependencies.typ"): *
-
 // You can add a heading without enumeration like this:
 #heading(numbering: none)[Preamble]
 

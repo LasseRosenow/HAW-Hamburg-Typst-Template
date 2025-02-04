@@ -1,5 +1,3 @@
-#import("../dependencies.typ"): *
-
 = Articles
 
 == The First Article
