@@ -2,6 +2,11 @@
 
 ## 0.3.3
 
+- Simplify outline implementation
+- Remove deprecated use of "label" and outline(indent: true)
+
+## 0.3.2
+
 - Fix wrong counter in page-header for reports
 - Improve spacing between headers for reports
 

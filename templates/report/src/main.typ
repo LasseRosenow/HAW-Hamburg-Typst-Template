@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.3.2": report
+#import "@preview/haw-hamburg:0.3.3": report
 #import "dependencies.typ": *
 
 // Take a look at the file `template.typ` in the file panel
