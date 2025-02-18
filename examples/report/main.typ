@@ -32,6 +32,7 @@
 #pagebreak(weak: true)
 #include "chapters/01_preamble.typ"
 #include "chapters/02_articles.typ"
+#include "chapters/03_example.typ"
 
 // Print glossary
 #pagebreak(weak: true)

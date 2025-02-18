@@ -26,7 +26,7 @@
   let HEADING_1_TOP_MARGIN = if is-thesis {
     104pt
   } else {
-    20pt
+    50pt
   }
   let PAGE_MARGIN_TOP = 37mm
 
@@ -46,7 +46,7 @@
     header:  context {
       // Before
       let selector_before = selector(heading.where(level: 1)).before(here())
-      let level_before = counter(selector_before)
+      let level_before = int(counter(selector_before).display())
       let headings_before = query(selector_before)
 
       if headings_before.len() == 0 {
@@ -55,7 +55,7 @@
 
       // After
       let selector_after = selector(heading.where(level: 1)).after(here())
-      let level_after = counter(selector_after)
+      let level_after = level_before + 1
       let headings_after = query(selector_after)
 
       if headings_after.len() == 0 {
@@ -84,8 +84,8 @@
       grid(
         rows: 2,
         gutter: 5pt,
-        if heading.numbering != none { 
-          emph(level.display() + " " + heading.body)
+        if heading.numbering != none {
+          emph(str(level) + " " + heading.body)
         } else {
           emph(heading.body)
         },
@@ -118,19 +118,33 @@
         top_margin = HEADING_1_TOP_MARGIN
       }
 
-      bottom_margin = 20pt
+      if is-thesis {
+        bottom_margin = 20pt
+      } else {
+        bottom_margin = 15pt
+      }
     } else if h.level == 2 {
       text_counter = text(counter(heading).display(), size: 14pt)
       text_body = text(h.body, size: 14pt)
 
-      top_margin = 20pt
-      bottom_margin = 20pt
+      if is-thesis {
+        top_margin = 20pt
+        bottom_margin = 20pt
+      } else {
+        top_margin = 15pt
+        bottom_margin = 15pt
+      }
     } else {
       text_counter = text(counter(heading).display(), size: 9pt)
       text_body = text(h.body, size: 10pt)
 
-      top_margin = 20pt
-      bottom_margin = 20pt
+      if is-thesis {
+        top_margin = 20pt
+        bottom_margin = 20pt
+      } else {
+        top_margin = 15pt
+        bottom_margin = 15pt
+      }
     }
 
     // Draw headings
