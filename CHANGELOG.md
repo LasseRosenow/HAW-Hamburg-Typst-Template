@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.3
+
+- Fix wrong counter in page-header for reports
+- Improve spacing between headers for reports
+
 ## 0.3.1
 
 - Fix typst 0.12 compatibility
