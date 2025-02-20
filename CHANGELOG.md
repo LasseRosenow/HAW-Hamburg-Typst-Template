@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+- Support typst 0.13.0
+- Simplify header styles and add margin collapse
+
 ## 0.3.3
 
 - Simplify outline implementation

@@ -11,7 +11,7 @@ To correctly render this template please make sure that the `New Computer Modern
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.3.3": bachelor-thesis
+#import "@preview/haw-hamburg:0.4.0": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
