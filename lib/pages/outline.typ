@@ -4,23 +4,19 @@
     numbering: "i",
   )
 
-  show outline.entry.where(
-    level: 1
-  ): it => {
-    v(1fr, weak: true)
-    strong(it.body)
-    h(1fr)
-    strong(it.page)
-  }
+  set outline.entry(fill: grid(
+    columns: 2,
+    gutter: 0pt,
+    repeat[~.],
+    h(11pt),
+  ))
+
+  show outline.entry.where(level: 1): set outline.entry(fill: none)
+  show outline.entry.where(level: 1): set text(weight: "bold")
+  show outline.entry.where(level: 1): set block(above: 16pt)
   
   outline(
     depth: 3,
     indent: auto,
-    fill: grid(
-      columns: 2,
-      gutter: 0pt,
-      repeat[~.],
-      h(11pt),
-    )
   )
 }

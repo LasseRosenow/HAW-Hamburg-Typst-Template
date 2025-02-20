@@ -23,11 +23,7 @@
   include-declaration-of-independent-processing: false,
   body,
 ) = {
-  let HEADING_1_TOP_MARGIN = if is-thesis {
-    104pt
-  } else {
-    50pt
-  }
+  let THESIS_HEADING_EXTRA_TOP_MARGIN = 70pt
   let PAGE_MARGIN_TOP = 37mm
 
   let title = title-de
@@ -43,7 +39,7 @@
     number-align: right,
     binding: left,
     header-ascent: 24pt,
-    header:  context {
+    header: context {
       // Before
       let selector_before = selector(heading.where(level: 1)).before(here())
       let level_before = int(counter(selector_before).display())
@@ -71,7 +67,7 @@
       let level = level_before
 
       if heading_after.location().page() == here().page() {
-        if heading_after.location().position().y == (HEADING_1_TOP_MARGIN + PAGE_MARGIN_TOP) or heading_after.location().position().y == PAGE_MARGIN_TOP {
+        if heading_after.location().position().y == (THESIS_HEADING_EXTRA_TOP_MARGIN + PAGE_MARGIN_TOP) or heading_after.location().position().y == PAGE_MARGIN_TOP {
           // Next header is first element of page
           return
         } else {
@@ -98,69 +94,64 @@
   set heading(
     numbering: "1.1", 
   )
-  // Configure correct spacing between headings and headings or paragraphs
-  show heading: h => {
-    let top_margin = 0pt   
-    let bottom_margin = 0pt
-    let text_counter = text(counter(heading).display())
-    let text_body = text(h.body)
 
-    if h.level == 1 {
-      text_counter = text(counter(heading).display(), font: "New Computer Modern 08", size: 21pt, weight: 600)
-      text_body = text(h.body, font: "New Computer Modern 08", size: 21pt, weight: 600)
 
-      if is-thesis {
-        // New page if configured
-        pagebreak(weak: true)
-        top_margin = HEADING_1_TOP_MARGIN
-      } else if here().position().y > HEADING_1_TOP_MARGIN {
-        // Only apply this when the header is not at the top of the page
-        top_margin = HEADING_1_TOP_MARGIN
-      }
+  // Configure headings
+  let font_size = 10pt
+  let top_margin = 0pt   
+  let bottom_margin = 0pt
 
-      if is-thesis {
-        bottom_margin = 20pt
-      } else {
-        bottom_margin = 15pt
-      }
-    } else if h.level == 2 {
-      text_counter = text(counter(heading).display(), size: 14pt)
-      text_body = text(h.body, size: 14pt)
-
-      if is-thesis {
-        top_margin = 20pt
-        bottom_margin = 20pt
-      } else {
-        top_margin = 15pt
-        bottom_margin = 15pt
-      }
-    } else {
-      text_counter = text(counter(heading).display(), size: 9pt)
-      text_body = text(h.body, size: 10pt)
-
-      if is-thesis {
-        top_margin = 20pt
-        bottom_margin = 20pt
-      } else {
-        top_margin = 15pt
-        bottom_margin = 15pt
-      }
-    }
-
-    // Draw headings
-    v(top_margin)
-    if h.numbering != none {
-      grid(
-        columns: 2,
-        gutter: 10pt,
-        text_counter,
-        text_body
-      )
-    } else {
-      text_body
-    }
-    v(bottom_margin)
+  // Configure h1
+  if is-thesis {
+    font_size = 21pt
+    top_margin = 25pt
+    bottom_margin = 45pt
+  } else {
+    font_size = 18pt
+    top_margin = 30pt
+    bottom_margin = 25pt
   }
+  
+  show heading.where(level: 1): set block(above: top_margin, below: bottom_margin)
+  show heading.where(level: 1): set text(size: font_size, weight: 600)
+  show heading.where(level: 1): it => {
+    if is-thesis {
+      // New page if configured
+      pagebreak(weak: true)
+      v(THESIS_HEADING_EXTRA_TOP_MARGIN)
+      it
+    } else {
+      it
+    }
+  }
+
+  // Configure h2
+  if is-thesis {
+    font_size = 14pt
+    top_margin = 30pt
+    bottom_margin = 25pt
+  } else {
+    font_size = 13pt
+    top_margin = 30pt
+    bottom_margin = 25pt
+  }
+
+  show heading.where(level: 2): set block(above: top_margin, below: bottom_margin)
+  show heading.where(level: 2): set text(size: font_size)
+
+  // Configure h3
+  if is-thesis {
+    font_size = 11pt
+    top_margin = 20pt
+    bottom_margin = 15pt
+  } else {
+    font_size = 11pt
+    top_margin = 20pt
+    bottom_margin = 15pt
+  }
+
+  show heading.where(level: 3): set block(above: top_margin, below: bottom_margin)
+  show heading.where(level: 3): set text(size: font_size)
 
   // Cover
   import "pages/cover.typ": cover_page

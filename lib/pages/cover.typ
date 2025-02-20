@@ -50,7 +50,7 @@
       // Title
       par(
         leading: 9pt,
-        text(title, size: 31pt, weight: 500, font: "New Computer Modern"),
+        text(title, size: 31pt, weight: 500),
       ),
       v(5mm),
       line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
@@ -74,11 +74,11 @@
         stack(
           line(start: (0pt, 0pt), length: 25pt, stroke: 0.9mm),
           v(3mm),
-          text("HOCHSCHULE FÜR ANGEWANDTE", size: 9pt, weight: "bold", font: "Open Sans"),
+          text("HOCHSCHULE FÜR ANGEWANDTE", size: 9pt, weight: "bold"),
           v(2mm),
-          text("WISSENSCHAFTEN HAMBURG", size: 9pt, weight: "bold", font: "Open Sans"),
+          text("WISSENSCHAFTEN HAMBURG", size: 9pt, weight: "bold"),
           v(2mm),
-          text("Hamburg University of Applied Sciences", size: 9pt, font: "Open Sans"),
+          text("Hamburg University of Applied Sciences", size: 9pt),
         )
       )
     )
@@ -100,7 +100,7 @@
       // Author
       align(
         center,
-        text(author, size: 14pt, font: "Open Sans"),
+        text(author, size: 14pt),
       ),
       v(23mm),
       // Title
@@ -108,7 +108,7 @@
         center,
         par(
           leading: 13pt,
-          text(title, size: 18pt, font: "Open Sans"),
+          text(title, size: 18pt),
         ),
       ),
       v(22mm),
