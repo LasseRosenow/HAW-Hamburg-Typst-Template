@@ -84,6 +84,45 @@
     )
   )
 
+  if (is-report) {
+    set text(size: 11pt)
+    place(
+      left + top,
+      dx: 18mm,
+      dy: 240mm,
+      stack(
+        // Submission date
+        if submission-date != none {
+          text(
+            translations.submitted + ": " + submission-date.display("[day]. [month repr:long] [year]"),
+          )
+
+          v(10pt)
+        },
+
+        // Supervision
+        if supervisors.len() > 0 and type(supervisors) != array {
+          text(
+            translations.supervising-examiner + ": " + text(upper(supervisors))
+          )
+        } else if supervisors.len() > 0 {
+          stack(
+            text(
+              translations.supervising-examiner + ": " + text(supervisors.first())
+            ),
+            if supervisors.len() > 1 {
+              v(10pt)
+              text(
+                translations.second-examiner + ": " + text(supervisors.at(1))
+              )
+            }
+          )
+        },
+      )
+    )
+  }
+  
+
   if is-thesis {
     // Second cover page
     pagebreak()

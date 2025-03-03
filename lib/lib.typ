@@ -4,6 +4,8 @@
   author: "",
   faculty: "",
   department: "",
+  supervisors: (),
+  submission-date: none,
   include-declaration-of-independent-processing: false,
   body,
 ) = {
@@ -28,8 +30,8 @@
     faculty: faculty,
     department: department,
     study-course: none,
-    supervisors: (),
-    submission-date: none,
+    supervisors: supervisors,
+    submission-date: submission-date,
     include-declaration-of-independent-processing: include-declaration-of-independent-processing,
     body,
   )
