@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.4.0": master-thesis
+#import "@preview/haw-hamburg:0.5.0": master-thesis
 #import "dependencies.typ": *
 
 // Take a look at the file `template.typ` in the file panel

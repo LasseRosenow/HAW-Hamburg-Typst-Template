@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+
+- Add optional supervisor to report template
+- Add optional submission date to report template
+
 ## 0.4.0
 
 - Support typst 0.13.0
