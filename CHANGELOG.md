@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+- Remove leftover deprecated use of `fill` and `indent: true` inside the outline
+
 ## 0.5.0
 
 - Add optional supervisor to report template
