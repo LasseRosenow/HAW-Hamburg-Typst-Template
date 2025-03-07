@@ -6,11 +6,19 @@
     set page(
       numbering: "i",
     )
+
     heading(translations.list-of-tables, numbering: none)
+
+    set outline.entry(fill: grid(
+      columns: 2,
+      gutter: 0pt,
+      repeat[~.],
+      h(11pt),
+    ))
+
     outline(
       title: none,
-      indent: true,
-      fill: repeat(text(". ")),
+      indent: auto,
       target: figure.where(kind: table),
     )
   }

@@ -48,3 +48,5 @@ Everyone is entitled in full equality to a fair and public hearing by an indepen
 1. Everyone charged with a penal offence has the right to be presumed innocent until proved guilty according to law in a public trial at which he has had all the guarantees necessary for his defence.
 
 2. No one shall be held guilty of any penal offence on account of any act or omission which did not constitute a penal offence, under national or international law, at the time when it was committed. Nor shall a heavier penalty be imposed than the one that was applicable at the time the penal offence was committed.
+
+#figure(caption: "lol", text("sfdasdf"))
