@@ -49,4 +49,4 @@ Everyone is entitled in full equality to a fair and public hearing by an indepen
 
 2. No one shall be held guilty of any penal offence on account of any act or omission which did not constitute a penal offence, under national or international law, at the time when it was committed. Nor shall a heavier penalty be imposed than the one that was applicable at the time the penal offence was committed.
 
-#figure(caption: "lol", text("sfdasdf"))
+#figure(caption: "Example figure", text("This is a figure"))
