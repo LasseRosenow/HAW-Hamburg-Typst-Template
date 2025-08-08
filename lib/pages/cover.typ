@@ -5,7 +5,6 @@
   is-master-thesis: false,
   is-bachelor-thesis: true,
   is-report: false,
-
   title: "",
   author: "",
   faculty: "",
@@ -26,7 +25,7 @@
     top + right,
     dx: -13mm,
     dy: 10mm,
-    image("../assets/logo.svg", width: 164pt)
+    image("../assets/logo.svg", width: 164pt),
   )
 
   // Title etc.
@@ -60,7 +59,7 @@
       v(2mm),
       // Department
       text(translations.department-of + " " + department, size: 10pt),
-    )
+    ),
   )
 
   // University name text
@@ -79,9 +78,9 @@
           text("WISSENSCHAFTEN HAMBURG", size: 9pt, weight: "bold"),
           v(2mm),
           text("Hamburg University of Applied Sciences", size: 9pt),
-        )
-      )
-    )
+        ),
+      ),
+    ),
   )
 
   if (is-report) {
@@ -103,25 +102,25 @@
         // Supervision
         if supervisors.len() > 0 and type(supervisors) != array {
           text(
-            translations.supervising-examiner + ": " + text(upper(supervisors))
+            translations.supervising-examiner + ": " + text(supervisors),
           )
         } else if supervisors.len() > 0 {
           stack(
             text(
-              translations.supervising-examiner + ": " + text(supervisors.first())
+              translations.supervising-examiner + ": " + text(supervisors.first()),
             ),
             if supervisors.len() > 1 {
               v(10pt)
               text(
-                translations.second-examiner + ": " + text(supervisors.at(1))
+                translations.second-examiner + ": " + text(supervisors.at(1)),
               )
-            }
+            },
           )
         },
-      )
+      ),
     )
   }
-  
+
 
   if is-thesis {
     // Second cover page
@@ -188,7 +187,7 @@
           }
         }
       },
-    
+
       // Submission date
       if submission-date != none {
         stack(
