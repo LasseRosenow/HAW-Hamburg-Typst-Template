@@ -13,7 +13,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.5.1": report
+#import "@preview/haw-hamburg:0.6.0": report
 
 #show: report.with(
   language: "en",
@@ -21,14 +21,13 @@ To use this package just add the following code to your [Typst](https://github.c
   author:"Example author",
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  include-declaration-of-independent-processing: true,
 )
 ```
 
 ### Bachelor Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.5.1": bachelor-thesis
+#import "@preview/haw-hamburg:0.6.0": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -47,14 +46,13 @@ To use this package just add the following code to your [Typst](https://github.c
   study-course: "Bachelor of Science Informatik Technischer Systeme",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: true,
 )
 ```
 
 ### Master Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.5.1": master-thesis
+#import "@preview/haw-hamburg:0.6.0": master-thesis
 
 #show: master-thesis.with(
   language: "en",
@@ -73,7 +71,6 @@ To use this package just add the following code to your [Typst](https://github.c
   study-course: "Master of Science Computer Science",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: true,
 )
 ```
 

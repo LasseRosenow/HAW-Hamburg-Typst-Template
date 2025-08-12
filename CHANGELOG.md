@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0
+
+- Update glossarium to 0.5.8
+- Add `before-content` and `after-content` properties to inject `abbreviations` or `glossaries` before and after the content letting them use the page counter before the actual content
+- Expose `declaration-of-independent-processing` page
+- **Breaking:**\
+  Remove `include-declaration-of-independent-processing` property. Please import `declaration-of-independent-processing` from this library and put it into `after-content` or wherever you want it to be.
+
 ## 0.5.1
 
 - Remove leftover deprecated use of `fill` and `indent: true` inside the outline
