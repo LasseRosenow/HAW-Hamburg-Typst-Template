@@ -1,3 +1,7 @@
+#let declaration-of-independent-processing = {
+  include "pages/declaration_of_independent_processing.typ"
+}
+
 #let report(
   language: "en",
   title: "",
@@ -6,7 +10,8 @@
   department: "",
   supervisors: (),
   submission-date: none,
-  include-declaration-of-independent-processing: false,
+  before-content: none,
+  after-content: none,
   body,
 ) = {
   import "template.typ": template
@@ -17,7 +22,7 @@
     is-report: true,
 
     language: language,
-    
+
     title-de: title,
     keywords-de: none,
     abstract-de: none,
@@ -32,29 +37,28 @@
     study-course: none,
     supervisors: supervisors,
     submission-date: submission-date,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    before-content: before-content,
+    after-content: after-content,
     body,
   )
 }
 
 #let bachelor-thesis(
   language: "en",
-
   title-de: "",
   keywords-de: none,
   abstract-de: none,
-
   title-en: none,
   keywords-en: none,
   abstract-en: none,
-
   author: "",
   faculty: "",
   department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
-  include-declaration-of-independent-processing: true,
+  before-content: none,
+  after-content: none,
   body,
 ) = {
   import "template.typ": template
@@ -80,29 +84,28 @@
     study-course: study-course,
     supervisors: supervisors,
     submission-date: submission-date,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    before-content: before-content,
+    after-content: after-content,
     body,
   )
 }
 
 #let master-thesis(
   language: "en",
-
   title-de: "",
   keywords-de: none,
   abstract-de: none,
-
   title-en: none,
   keywords-en: none,
   abstract-en: none,
-
   author: "",
   faculty: "",
   department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
-  include-declaration-of-independent-processing: true,
+  before-content: none,
+  after-content: none,
   body,
 ) = {
   import "template.typ": template
@@ -128,7 +131,8 @@
     study-course: study-course,
     supervisors: supervisors,
     submission-date: submission-date,
-    include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    before-content: before-content,
+    after-content: after-content,
     body,
   )
 }

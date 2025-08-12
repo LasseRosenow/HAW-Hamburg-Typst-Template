@@ -1,6 +1,8 @@
 #import "../translations.typ": translations
 
-#let declaration_of_independent_processing() = {
+#{
+  pagebreak(weak: true)
+
   heading(
     outlined: true,
     numbering: none,
@@ -15,9 +17,7 @@
   grid(
     columns: 3,
     gutter: 10pt,
-    line(length: 85pt, stroke: 1pt),
-    line(length: 85pt, stroke: 1pt),
-    line(length: 150pt, stroke: 1pt),
+    line(length: 85pt, stroke: 1pt), line(length: 85pt, stroke: 1pt), line(length: 150pt, stroke: 1pt),
     align(center, text(translations.place, size: 9pt)),
     align(center, text(translations.date, size: 9pt)),
     align(center, text(translations.signature, size: 9pt)),

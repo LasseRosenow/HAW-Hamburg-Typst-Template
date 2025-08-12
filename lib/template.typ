@@ -3,17 +3,17 @@
   is-master-thesis: false,
   is-bachelor-thesis: true,
   is-report: false,
-
+  // Language
   language: "en",
-
+  // German
   title-de: "",
   keywords-de: none,
   abstract-de: none,
-
+  // English
   title-en: none,
   keywords-en: none,
   abstract-en: none,
-
+  // Basic fields
   author: "",
   faculty: "",
   department: "",
@@ -21,6 +21,8 @@
   supervisors: (),
   submission-date: none,
   include-declaration-of-independent-processing: false,
+  before-content: none,
+  after-content: none,
   body,
 ) = {
   let THESIS_HEADING_EXTRA_TOP_MARGIN = 70pt
@@ -35,7 +37,7 @@
   set document(author: author, title: title, date: submission-date)
   set page(
     margin: (left: 31.5mm, right: 31.5mm, top: PAGE_MARGIN_TOP, bottom: 56mm),
-    numbering: "1",
+    numbering: "i",
     number-align: right,
     binding: left,
     header-ascent: 24pt,
@@ -67,7 +69,10 @@
       let level = level_before
 
       if heading_after.location().page() == here().page() {
-        if heading_after.location().position().y == (THESIS_HEADING_EXTRA_TOP_MARGIN + PAGE_MARGIN_TOP) or heading_after.location().position().y == PAGE_MARGIN_TOP {
+        if (
+          heading_after.location().position().y == (THESIS_HEADING_EXTRA_TOP_MARGIN + PAGE_MARGIN_TOP)
+            or heading_after.location().position().y == PAGE_MARGIN_TOP
+        ) {
           // Next header is first element of page
           return
         } else {
@@ -87,18 +92,18 @@
         },
         line(length: 100%, stroke: 0.7pt),
       )
-    }
+    },
   )
   set par(leading: 9pt)
   set text(font: "New Computer Modern", lang: language, size: 10.85pt)
   set heading(
-    numbering: "1.1", 
+    numbering: "1.1",
   )
 
 
   // Configure headings
   let font_size = 10pt
-  let top_margin = 0pt   
+  let top_margin = 0pt
   let bottom_margin = 0pt
 
   // Configure h1
@@ -111,7 +116,7 @@
     top_margin = 30pt
     bottom_margin = 25pt
   }
-  
+
   show heading.where(level: 1): set block(above: top_margin, below: bottom_margin)
   show heading.where(level: 1): set text(size: font_size, weight: 600)
   show heading.where(level: 1): it => {
@@ -192,8 +197,7 @@
   }
 
   // Table of contents.
-  import "pages/outline.typ": outline_page
-  outline_page()
+  include "pages/outline.typ"
 
   // List of Figures
   if is-thesis {
@@ -210,21 +214,22 @@
     include "pages/listings.typ"
   }
 
-  // Reset page numbering and set it to numbers
-  set page(
-    numbering: "1",
-  )
-  counter(page).update(1)
+  // Include before-content pages
+  before-content
 
-  // Main body.
-  set par(justify: true)
+  // Content
+  {
+    // Reset page numbering and set it to numbers
+    set page(
+      numbering: "1",
+    )
+    counter(page).update(1)
 
-  body
+    set par(justify: true)
 
-  // Declaration of independent processing
-  if include-declaration-of-independent-processing {
-    pagebreak(weak: true)
-    import "pages/declaration_of_independent_processing.typ": declaration_of_independent_processing
-    declaration_of_independent_processing()
+    body
+
+    // Include after-content pages
+    after-content
   }
 }

@@ -1,11 +1,11 @@
-#let abbreviations-entry-list = (
-    cpu: (
-      short: "CPU",
-      long: "Central Processing Unit",
-    ),
-)
+// Abbreviations
+// Use: @key or @key:pl to reference and #print-glossary to print it
+// More documentation: https://typst.app/universe/package/glossarium/
 
-// Add all entries to the "Abbreviation" group
-#for key in abbreviations-entry-list.keys() {
-  abbreviations-entry-list.at(key).insert("group", "Abbreviations")
-}
+#let abbreviations-entry-list = (
+  (
+    key: "cpu",
+    short: "CPU",
+    long: "Central Processing Unit",
+  ),
+)

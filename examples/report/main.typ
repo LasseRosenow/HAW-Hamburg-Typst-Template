@@ -1,9 +1,16 @@
-// Import dependencies such as glossaries etc.
-#import "dependencies.typ": *
+// Register abbreviations and glossary
+#import "dependencies.typ": make-glossary, print-glossary, register-glossary
+#show: make-glossary
+// Abbreviations
+#import "abbreviations.typ": abbreviations-entry-list
+#register-glossary(abbreviations-entry-list)
+// Glossary
+#import "glossary.typ": glossary-entry-list
+#register-glossary(glossary-entry-list)
 
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
-#import "../../lib/lib.typ": report
+#import "../../lib/lib.typ": declaration-of-independent-processing, report
 #show: report.with(
   language: "en",
   title: "Universal Declaration of Human Rights",
@@ -12,37 +19,39 @@
   department: "Computer Science",
   supervisors: "Prof. Dr. Example",
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: false,
+  // Everything inside "before-content" will be automatically injected
+  // into the document before the actual content starts.
+  before-content: {
+    // Print abbreviations
+    pagebreak(weak: true)
+    heading("Abbreviations", numbering: none)
+    print-glossary(
+      abbreviations-entry-list,
+      disable-back-references: true,
+    )
+  },
+  // Everything inside "after-content" will be automatically injected
+  // into the document after the actual content ends.
+  after-content: {
+    // Print glossary
+    pagebreak(weak: true)
+    heading("Glossary", numbering: none)
+    print-glossary(
+      glossary-entry-list,
+      disable-back-references: true,
+    )
+
+    // Print bibliography
+    pagebreak(weak: true)
+    bibliography("bibliography.bib", style: "../../lib/assets/ieeetran.csl")
+
+    // Declaration of independent processing (comment in to enable)
+    // declaration-of-independent-processing
+  },
 )
-
-// Enable glossary
-// Use: @key or @key:pl to reference
-// More documentation: https://typst.app/universe/package/glossy
-#import "abbreviations.typ": abbreviations-entry-list
-#import "glossary.typ": glossary-entry-list
-#show: init-glossary.with(abbreviations-entry-list)
-#show: init-glossary.with(glossary-entry-list)
-
-// Print abbreviations
-#pagebreak(weak: true)
-#{
-  set heading(numbering: none)
-  glossary(title: "Abbreviations", groups: "Abbreviations")
-}
 
 // Include chapters of report
 #pagebreak(weak: true)
 #include "chapters/01_preamble.typ"
 #include "chapters/02_articles.typ"
 #include "chapters/03_example.typ"
-
-// Print glossary
-#pagebreak(weak: true)
-#{
-  set heading(numbering: none)
-  glossary(title: "Glossary", groups: "")
-}
-
-// Print bibliography
-#pagebreak(weak: true)
-#bibliography("bibliography.bib", style: "../../lib/assets/ieeetran.csl")

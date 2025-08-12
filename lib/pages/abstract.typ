@@ -5,11 +5,6 @@
   keywords: (),
   abstract: "",
 ) = {
-  // TODO Needed, because context creates empty pages with wrong numbering
-  set page(
-    numbering: "i",
-  )
-
   let custom_title(title) = {
     text(title, weight: "bold")
   }
@@ -22,19 +17,19 @@
 
     v(9mm),
 
-    custom_title(if language == "en" {"Title of thesis"} else {"Thema der Arbeit"}),
+    custom_title(if language == "en" { "Title of thesis" } else { "Thema der Arbeit" }),
     v(6mm),
     text(title),
 
     v(9mm),
 
-    custom_title(if language == "en" {"Keywords"} else {"Stichworte"}),
+    custom_title(if language == "en" { "Keywords" } else { "Stichworte" }),
     v(6mm),
     text(keywords.join(", ")),
 
     v(9mm),
 
-    custom_title(if language == "en" {"Abstract"} else {"Kurzzusammenfassung"}),
+    custom_title(if language == "en" { "Abstract" } else { "Kurzzusammenfassung" }),
     v(6mm),
     text(abstract),
   )
