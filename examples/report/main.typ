@@ -7,12 +7,12 @@
 #show: report.with(
   language: "en",
   title: "Universal Declaration of Human Rights",
-  author:"United Nations",
+  author: "United Nations",
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  supervisors: ("Prof. Dr. Example"),
+  supervisors: "Prof. Dr. Example",
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: true,
+  include-declaration-of-independent-processing: false,
 )
 
 // Enable glossary
