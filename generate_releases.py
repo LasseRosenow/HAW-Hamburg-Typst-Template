@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import tomllib
 import shutil
 import os
@@ -28,7 +30,7 @@ def write_toml(data, path):
         first_row = True
         for key, value in data.items():
             if isinstance(value, dict):
-                f.write(f"{"" if first_row else "\n"}[{key}]\n")  # Write section header
+                f.write(f"{'' if first_row else '\n'}[{key}]\n")  # Write section header
                 for sub_key, sub_value in value.items():
                     f.write(f"{sub_key} = {format_value(sub_value)}\n")
             else:
