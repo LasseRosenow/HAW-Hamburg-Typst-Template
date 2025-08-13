@@ -11,7 +11,7 @@ To correctly render this template please make sure that the `New Computer Modern
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.6.0": report
+#import "@preview/haw-hamburg:0.6.1": report
 
 #show: report.with(
   language: "en",

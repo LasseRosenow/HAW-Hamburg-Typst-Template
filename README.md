@@ -13,7 +13,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.6.0": report
+#import "@preview/haw-hamburg:0.6.1": report
 
 #show: report.with(
   language: "en",
@@ -27,7 +27,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Bachelor Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.6.0": bachelor-thesis
+#import "@preview/haw-hamburg:0.6.1": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -52,7 +52,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Master Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.6.0": master-thesis
+#import "@preview/haw-hamburg:0.6.1": master-thesis
 
 #show: master-thesis.with(
   language: "en",

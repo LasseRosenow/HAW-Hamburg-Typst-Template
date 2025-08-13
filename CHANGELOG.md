@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+
+- Abstract: Fix case where only one keyword exists (#5) Thanks @AnnsAnns!
+
 ## 0.6.0
 
 - Update glossarium to 0.5.8

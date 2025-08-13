@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.6.0": declaration-of-independent-processing, report
+#import "@preview/haw-hamburg:0.6.1": declaration-of-independent-processing, report
 
 // Register abbreviations and glossary
 #import "dependencies.typ": make-glossary, print-glossary, register-glossary
