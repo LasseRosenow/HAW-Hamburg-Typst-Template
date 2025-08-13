@@ -84,6 +84,7 @@ These problems can be avoided by following these steps:
 - VSCode:
   - Install the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension.
   - Make sure to start the `PDF` or `Live Preview` only from within your `main.typ` file.
+  - References and the language server in general only work correctly when the `Live Preview` of the `main.typ` file is running in the background.
   - If problems occur it usually helps to close the preview and restart it from your `main.typ` file.
 
 ## Examples
