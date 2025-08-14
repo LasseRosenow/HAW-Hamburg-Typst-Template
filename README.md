@@ -4,7 +4,7 @@ This is an **`unofficial`** template for writing a report or thesis in the `HAW 
 
 ## Required Fonts
 
-To correctly render this template please make sure that the `New Computer Modern` font is installed on your system.
+To correctly render this template please make sure that the [New Computer Modern](https://ctan.org/pkg/newcomputermodern) font is installed on your system.
 
 ## Usage
 
