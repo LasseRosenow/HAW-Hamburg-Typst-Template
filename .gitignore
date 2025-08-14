@@ -1,2 +1,8 @@
-templates/**/*.pdf
+# PDF-Files except examples
+*.pdf
+!examples/report/main.pdf
+!examples/bachelor-thesis/main.pdf
+!examples/master-thesis/main.pdf
+
+# Output folder for publishing to the Typst Universe
 generated
