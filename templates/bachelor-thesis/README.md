@@ -2,10 +2,6 @@
 
 This is an **`unofficial`** template for writing a bachelor thesis in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
 
-## Required Fonts
-
-To correctly render this template please make sure that the `New Computer Modern` font is installed on your system.
-
 ## Usage
 
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
