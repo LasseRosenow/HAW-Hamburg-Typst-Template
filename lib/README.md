@@ -9,7 +9,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": report
+#import "@preview/haw-hamburg:0.6.1": report
 
 #show: report.with(
   language: "en",
@@ -17,14 +17,13 @@ To use this package just add the following code to your [Typst](https://github.c
   author:"Example author",
   faculty: "Engineering and Computer Science",
   department: "Computer Science",
-  include-declaration-of-independent-processing: true,
 )
 ```
 
 ### Bachelor Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": bachelor-thesis
+#import "@preview/haw-hamburg:0.6.1": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -43,14 +42,13 @@ To use this package just add the following code to your [Typst](https://github.c
   study-course: "Bachelor of Science Informatik Technischer Systeme",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: true,
 )
 ```
 
 ### Master Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": master-thesis
+#import "@preview/haw-hamburg:0.6.1": master-thesis
 
 #show: master-thesis.with(
   language: "en",
@@ -69,21 +67,8 @@ To use this package just add the following code to your [Typst](https://github.c
   study-course: "Master of Science Computer Science",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
-  include-declaration-of-independent-processing: true,
 )
 ```
-
-## How to Compile
-
-This project contains an example setup that splits individual chapters into different files.\
-This can cause problems when using references etc.\
-These problems can be avoided by following these steps:
-
-- Make sure to always compile your `main.typ` file which includes all of your chapters for references to work correctly.
-- VSCode:
-  - Install the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension.
-  - Make sure to start the `PDF` or `Live Preview` only from within your `main.typ` file.
-  - If problems occur it usually helps to close the preview and restart it from your `main.typ` file.
 
 ## Examples
 
