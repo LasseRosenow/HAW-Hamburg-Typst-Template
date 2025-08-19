@@ -77,7 +77,9 @@ This can cause problems when using references etc.\
 These problems can be avoided by following these steps:
 
 - Make sure to always compile your `main.typ` file which includes all of your chapters for references to work correctly.
-- **CLI**: `typst compile main.typ`
+- **CLI**:
+  - Install [Typst](https://github.com/typst/typst) on your system.
+  - Open the terminal and run: `typst compile main.typ`.
 - **VSCode**:
   - Install the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension.
   - Make sure to start the `PDF` or `Live Preview` only from within your `main.typ` file.
