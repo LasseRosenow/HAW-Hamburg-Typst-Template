@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.2
+
+- Fix incorrect supervisor capitalization
+- Fix wrong date format in english template
+
 ## 0.6.1
 
 - Abstract: Fix case where only one keyword exists (#5) Thanks @AnnsAnns!

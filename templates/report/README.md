@@ -7,7 +7,7 @@ This is an **`unofficial`** template for writing a report in the `HAW Hamburg` d
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.6.1": report
+#import "@preview/haw-hamburg:0.6.2": report
 
 #show: report.with(
   language: "en",

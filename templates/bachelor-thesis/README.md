@@ -7,7 +7,7 @@ This is an **`unofficial`** template for writing a bachelor thesis in the `HAW H
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.6.1": bachelor-thesis
+#import "@preview/haw-hamburg:0.6.2": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
