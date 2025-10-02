@@ -93,7 +93,7 @@
         // Submission date
         if submission-date != none {
           text(
-            translations.submitted + ": " + submission-date.display("[day]. [month repr:long] [year]"),
+            translations.submitted-on + ": " + (translations.submission-date-format)(submission-date),
           )
 
           v(10pt)
@@ -177,13 +177,13 @@
       // Supervision
       if supervisors.len() > 0 {
         if type(supervisors) != array {
-          text(translations.supervising-examiner + ": " + text(upper(supervisors), weight: "bold"), size: 10pt)
+          text(translations.supervising-examiner + ": " + text(supervisors, weight: "bold"), size: 10pt)
         } else {
-          text(translations.supervising-examiner + ": " + text(upper(supervisors.first()), weight: "bold"), size: 10pt)
+          text(translations.supervising-examiner + ": " + text(supervisors.first(), weight: "bold"), size: 10pt)
 
           if supervisors.len() > 1 {
             linebreak()
-            text(translations.second-examiner + ": " + text(upper(supervisors.at(1)), weight: "bold"), size: 10pt)
+            text(translations.second-examiner + ": " + text(supervisors.at(1), weight: "bold"), size: 10pt)
           }
         }
       },
@@ -195,7 +195,7 @@
           line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
           v(4mm),
           text(
-            translations.submitted + ": " + submission-date.display("[day]. [month repr:long] [year]"),
+            translations.submitted-on + ": " + (translations.submission-date-format)(submission-date),
             size: 10pt,
           ),
         )
