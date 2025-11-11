@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0
+
+- Remove department
+- Rename Faculty of `Computer Science` to `Computer Science and Digital Society`
+
 ## 0.6.2
 
 - Fix incorrect supervisor capitalization
