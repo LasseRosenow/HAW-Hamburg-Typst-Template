@@ -1,5 +1,5 @@
 [package]
 name = "haw-hamburg"
 entrypoint = "lib.typ"
-description = "Unofficial template for writing a report or thesis in the HAW Hamburg department of Computer Science design."
+description = "Unofficial template for writing a report or thesis in the HAW Hamburg Faculty of Computer Science and Digital Society style."
 categories = ["report", "thesis"]

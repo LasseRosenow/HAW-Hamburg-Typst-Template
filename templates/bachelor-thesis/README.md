@@ -1,6 +1,6 @@
 # HAW Hamburg Typst Template
 
-This is an **`unofficial`** template for writing a bachelor thesis in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
+This is an **`unofficial`** template for writing a bachelor thesis in the `HAW Hamburg` Faculty of `Computer Science and Digital Society` style using [Typst](https://github.com/typst/typst).
 
 ## Usage
 
@@ -21,8 +21,7 @@ To use this package just add the following code to your [Typst](https://github.c
   abstract-en: "Example abstract",
 
   author: "Example author",
-  faculty: "Engineering and Computer Science",
-  department: "Computer Science",
+  faculty: "Computer Science and Digital Society",
   study-course: "Bachelor of Science Informatik Technischer Systeme",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),

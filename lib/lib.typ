@@ -7,7 +7,6 @@
   title: "",
   author: "",
   faculty: "",
-  department: "",
   supervisors: (),
   submission-date: none,
   before-content: none,
@@ -33,7 +32,6 @@
 
     author: author,
     faculty: faculty,
-    department: department,
     study-course: none,
     supervisors: supervisors,
     submission-date: submission-date,
@@ -53,7 +51,6 @@
   abstract-en: none,
   author: "",
   faculty: "",
-  department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
@@ -80,7 +77,6 @@
 
     author: author,
     faculty: faculty,
-    department: department,
     study-course: study-course,
     supervisors: supervisors,
     submission-date: submission-date,
@@ -100,7 +96,6 @@
   abstract-en: none,
   author: "",
   faculty: "",
-  department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
@@ -127,7 +122,6 @@
 
     author: author,
     faculty: faculty,
-    department: department,
     study-course: study-course,
     supervisors: supervisors,
     submission-date: submission-date,

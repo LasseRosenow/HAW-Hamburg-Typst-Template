@@ -29,8 +29,7 @@ felis. Curabitur dictum gravida mauris. Nam arcu lib
 ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
   author: "The Computer",
-  faculty: "Engineering and Computer Science",
-  department: "Computer Science",
+  faculty: "Computer Science and Digital Society",
   study-course: "Bachelor of Science Informatik Technischer Systeme",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),

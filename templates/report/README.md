@@ -1,6 +1,6 @@
 # HAW Hamburg Typst Template
 
-This is an **`unofficial`** template for writing a report in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
+This is an **`unofficial`** template for writing a report in the `HAW Hamburg` Faculty of `Computer Science and Digital Society` style using [Typst](https://github.com/typst/typst).
 
 ## Usage
 
@@ -13,8 +13,7 @@ To use this package just add the following code to your [Typst](https://github.c
   language: "en",
   title: "Example title",
   author:"Example author",
-  faculty: "Engineering and Computer Science",
-  department: "Computer Science",
+  faculty: "Computer Science and Digital Society",
 )
 ```
 

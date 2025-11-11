@@ -16,7 +16,6 @@
   // Basic fields
   author: "",
   faculty: "",
-  department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
@@ -169,7 +168,6 @@
     title: title,
     author: author,
     faculty: faculty,
-    department: department,
     study-course: study-course,
     supervisors: supervisors,
     submission-date: submission-date,

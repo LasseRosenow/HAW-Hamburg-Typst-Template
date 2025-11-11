@@ -15,8 +15,7 @@
   language: "en",
   title: "Universal Declaration of Human Rights",
   author: "United Nations",
-  faculty: "Engineering and Computer Science",
-  department: "Computer Science",
+  faculty: "Computer Science and Digital Society",
   supervisors: "Prof. Dr. Example",
   submission-date: datetime(year: 1948, month: 12, day: 10),
   // Everything inside "before-content" will be automatically injected

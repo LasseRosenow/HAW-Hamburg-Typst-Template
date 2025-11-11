@@ -15,8 +15,7 @@
   language: "en",
   title: "Answer to the Ultimate Question of Life, the Universe, and Everything",
   author: "The Computer",
-  faculty: "Engineering and Computer Science",
-  department: "Computer Science",
+  faculty: "Computer Science and Digital Society",
   // Everything inside "before-content" will be automatically injected
   // into the document before the actual content starts.
   before-content: {

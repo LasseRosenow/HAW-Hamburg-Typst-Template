@@ -8,7 +8,6 @@
   title: "",
   author: "",
   faculty: "",
-  department: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
@@ -56,9 +55,6 @@
       v(12mm),
       // Faculty
       text(translations.faculty-of + " " + faculty, size: 10pt, weight: "bold"),
-      v(2mm),
-      // Department
-      text(translations.department-of + " " + department, size: 10pt),
     ),
   )
 
@@ -165,7 +161,6 @@
           text(translations.master-thesis-submitted-for-examination-in-masters-degree)
         },
         text(translations.in-the-study-course + " " + text(study-course, style: "italic")),
-        text(translations.at-the-department + " " + department),
         text(translations.at-the-faculty-of + " " + faculty),
         text(translations.at-university-of-applied-science-hamburg),
       ),

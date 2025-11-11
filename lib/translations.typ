@@ -29,10 +29,6 @@
     en: "Faculty of",
     de: "Fakultät",
   ),
-  department-of: value(
-    en: "Department of",
-    de: "Department",
-  ),
   bachelor-thesis-submitted-for-examination-in-bachelors-degree: value(
     en: "Bachelor thesis submitted for examination in Bachelor's degree",
     de: "Bachelorarbeit eingereicht im Rahmen der Bachelorprüfung",
@@ -44,10 +40,6 @@
   in-the-study-course: value(
     en: "in the study course",
     de: "im Studiengang",
-  ),
-  at-the-department: value(
-    en: "at the Department",
-    de: "am Department",
   ),
   at-the-faculty-of: value(
     en: "at the Faculty of",
