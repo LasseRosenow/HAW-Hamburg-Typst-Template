@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.0
+
+- Use new #title() function in cover page
+- Require at least `Typst` 0.14
+
 ## 0.7.0
 
 - Remove department

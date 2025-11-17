@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.7.0": declaration-of-independent-processing, master-thesis
+#import "@preview/haw-hamburg:0.8.0": declaration-of-independent-processing, master-thesis
 
 // Register abbreviations and glossary
 #import "dependencies.typ": make-glossary, print-glossary, register-glossary
