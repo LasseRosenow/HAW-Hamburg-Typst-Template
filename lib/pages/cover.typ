@@ -28,6 +28,7 @@
   )
 
   // Title etc.
+  show title: set text(size: 31pt, weight: 500)
   pad(
     left: 57mm,
     top: 66mm,
@@ -46,10 +47,7 @@
       text(author, size: 9pt),
       v(13mm),
       // Title
-      par(
-        leading: 9pt,
-        text(title, size: 31pt, weight: 500),
-      ),
+      std.title(),
       v(5mm),
       line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
       v(12mm),
