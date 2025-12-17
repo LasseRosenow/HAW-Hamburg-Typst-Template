@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1
+
+- Update glossarium to 0.5.9
+
 ## 0.8.0
 
 - Use new #title() function in cover page
