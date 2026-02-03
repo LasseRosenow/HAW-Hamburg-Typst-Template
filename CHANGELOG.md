@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.2
+
+- Fix margin on abstract page
+- Make `keywords` optional
+- Cleanup unused parameters
+- Update glossarium to 0.5.10
+
 ## 0.8.1
 
 - Update glossarium to 0.5.9
