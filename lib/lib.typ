@@ -2,6 +2,53 @@
   include "pages/declaration_of_independent_processing.typ"
 }
 
+// Internal function to create a thesis (bachelor or master)
+#let _thesis(
+  is-master: false,
+  language: "en",
+  title-de: "",
+  keywords-de: none,
+  abstract-de: none,
+  title-en: none,
+  keywords-en: none,
+  abstract-en: none,
+  author: "",
+  faculty: "",
+  study-course: "",
+  supervisors: (),
+  submission-date: none,
+  before-content: none,
+  after-content: none,
+  body,
+) = {
+  import "template.typ": template
+  template(
+    is-thesis: true,
+    is-master-thesis: is-master,
+    is-bachelor-thesis: not is-master,
+    is-report: false,
+
+    language: language,
+
+    title-de: title-de,
+    keywords-de: keywords-de,
+    abstract-de: abstract-de,
+
+    title-en: title-en,
+    keywords-en: keywords-en,
+    abstract-en: abstract-en,
+
+    author: author,
+    faculty: faculty,
+    study-course: study-course,
+    supervisors: supervisors,
+    submission-date: submission-date,
+    before-content: before-content,
+    after-content: after-content,
+    body,
+  )
+}
+
 #let report(
   language: "en",
   title: "",
@@ -58,23 +105,15 @@
   after-content: none,
   body,
 ) = {
-  import "template.typ": template
-  template(
-    is-thesis: true,
-    is-master-thesis: false,
-    is-bachelor-thesis: true,
-    is-report: false,
-
+  _thesis(
+    is-master: false,
     language: language,
-
     title-de: title-de,
     keywords-de: keywords-de,
     abstract-de: abstract-de,
-
     title-en: title-en,
     keywords-en: keywords-en,
     abstract-en: abstract-en,
-
     author: author,
     faculty: faculty,
     study-course: study-course,
@@ -103,23 +142,15 @@
   after-content: none,
   body,
 ) = {
-  import "template.typ": template
-  template(
-    is-thesis: true,
-    is-master-thesis: true,
-    is-bachelor-thesis: false,
-    is-report: false,
-
+  _thesis(
+    is-master: true,
     language: language,
-
     title-de: title-de,
     keywords-de: keywords-de,
     abstract-de: abstract-de,
-
     title-en: title-en,
     keywords-en: keywords-en,
     abstract-en: abstract-en,
-
     author: author,
     faculty: faculty,
     study-course: study-course,

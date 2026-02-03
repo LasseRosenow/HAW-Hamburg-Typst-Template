@@ -94,22 +94,24 @@
         },
 
         // Supervision
-        if supervisors.len() > 0 and type(supervisors) != array {
-          text(
-            translations.supervising-examiner + ": " + text(supervisors),
-          )
-        } else if supervisors.len() > 0 {
-          stack(
+        if supervisors.len() > 0 {
+          if type(supervisors) != array {
             text(
-              translations.supervising-examiner + ": " + text(supervisors.first()),
-            ),
-            if supervisors.len() > 1 {
-              v(10pt)
+              translations.supervising-examiner + ": " + text(supervisors),
+            )
+          } else {
+            stack(
               text(
-                translations.second-examiner + ": " + text(supervisors.at(1)),
-              )
-            },
-          )
+                translations.supervising-examiner + ": " + text(supervisors.first()),
+              ),
+              if supervisors.len() > 1 {
+                v(10pt)
+                text(
+                  translations.second-examiner + ": " + text(supervisors.at(1)),
+                )
+              },
+            )
+          }
         },
       ),
     )

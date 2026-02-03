@@ -25,10 +25,12 @@
 
     custom_title(if language == "en" { "Keywords" } else { "Stichworte" }),
     v(6mm),
-    if type(keywords) == array {
-      text(keywords.join(", "))
-    } else {
-      text(keywords)
+    if keywords != none {
+      if type(keywords) == array {
+        text(keywords.join(", "))
+      } else {
+        text(keywords)
+      }
     },
 
     v(9mm),

@@ -6,3 +6,7 @@
 
 # Output folder for publishing to the Typst Universe
 generated
+
+# Python cache
+__pycache__/
+*.pyc

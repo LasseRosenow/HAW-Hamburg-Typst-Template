@@ -19,7 +19,6 @@
   study-course: "",
   supervisors: (),
   submission-date: none,
-  include-declaration-of-independent-processing: false,
   before-content: none,
   after-content: none,
   body,
@@ -29,7 +28,7 @@
 
   let title = title-de
   if language == "en" {
-    title = title-en
+    title = if title-en != none { title-en } else { title-de }
   }
 
   // Set the document's basic properties.
