@@ -12,7 +12,6 @@
   set par(justify: true)
 
   stack(
-    spacing: 10mm,
     custom_title(author),
 
     v(9mm),
@@ -23,15 +22,19 @@
 
     v(9mm),
 
-    custom_title(if language == "en" { "Keywords" } else { "Stichworte" }),
-    v(6mm),
-    if type(keywords) == array {
-      text(keywords.join(", "))
-    } else {
-      text(keywords)
-    },
+    if (keywords != none or (type(keywords) == array and keywords.len > 0)) {
+      stack(
+        custom_title(if language == "en" { "Keywords" } else { "Stichworte" }),
+        v(6mm),
+        if type(keywords) == array {
+          text(keywords.join(", "))
+        } else {
+          text(keywords)
+        },
 
-    v(9mm),
+        v(9mm),
+      )
+    },
 
     custom_title(if language == "en" { "Abstract" } else { "Kurzzusammenfassung" }),
     v(6mm),

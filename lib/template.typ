@@ -183,6 +183,7 @@
         keywords: keywords-en,
         abstract: abstract-en,
       )
+      v(10mm)
     }
     abstract_page(
       language: "de",
