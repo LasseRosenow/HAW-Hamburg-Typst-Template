@@ -19,7 +19,6 @@
   study-course: "",
   supervisors: (),
   submission-date: none,
-  include-declaration-of-independent-processing: false,
   before-content: none,
   after-content: none,
   body,
