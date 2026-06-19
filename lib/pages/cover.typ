@@ -24,7 +24,7 @@
     top + right,
     dx: -13mm,
     dy: 10mm,
-    image("../assets/logo.svg", width: 164pt),
+    image("../assets/logo.svg", width: 164pt, alt: "HAW Hamburg logo"),
   )
 
   // Title etc.
