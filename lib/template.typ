@@ -40,42 +40,32 @@
     binding: left,
     header-ascent: 24pt,
     header: context {
-      // Before
       let selector_before = selector(heading.where(level: 1)).before(here())
-      let level_before = int(counter(selector_before).display())
       let headings_before = query(selector_before)
 
       if headings_before.len() == 0 {
         return
       }
 
-      // After
       let selector_after = selector(heading.where(level: 1)).after(here())
-      let level_after = level_before + 1
       let headings_after = query(selector_after)
 
       if headings_after.len() == 0 {
         return
       }
 
-      // Get headings
       let heading_before = headings_before.last()
       let heading_after = headings_after.first()
-
-      // Decide on heading
       let heading = heading_before
-      let level = level_before
 
       if heading_after.location().page() == here().page() {
         if (
           heading_after.location().position().y == (THESIS_HEADING_EXTRA_TOP_MARGIN + PAGE_MARGIN_TOP)
             or heading_after.location().position().y == PAGE_MARGIN_TOP
         ) {
-          // Next header is first element of page
           return
         } else {
           heading = heading_after
-          level = level_after
         }
       }
 
@@ -84,7 +74,7 @@
         rows: 2,
         gutter: 5pt,
         if heading.numbering != none {
-          emph(str(level) + " " + heading.body)
+          emph(counter(heading.func()).display(at: heading.location()) + [ ] + heading.body)
         } else {
           emph(heading.body)
         },
@@ -98,13 +88,12 @@
     numbering: "1.1",
   )
 
-
-  // Configure headings
+  // Heading Configuration
   let font_size = 10pt
   let top_margin = 0pt
   let bottom_margin = 0pt
 
-  // Configure h1
+  // Level 1 Headings
   if is-thesis {
     font_size = 21pt
     top_margin = 25pt
@@ -128,7 +117,7 @@
     }
   }
 
-  // Configure h2
+  // Level 2 Headings
   if is-thesis {
     font_size = 14pt
     top_margin = 30pt
@@ -142,7 +131,7 @@
   show heading.where(level: 2): set block(above: top_margin, below: bottom_margin)
   show heading.where(level: 2): set text(size: font_size)
 
-  // Configure h3
+  // Level 3 Headings
   if is-thesis {
     font_size = 11pt
     top_margin = 20pt
@@ -218,9 +207,7 @@
   // Content
   {
     // Reset page numbering and set it to numbers
-    set page(
-      numbering: "1",
-    )
+    set page(numbering: "1")
     counter(page).update(1)
 
     set par(justify: true)
