@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0
+
+- Optimize template internals
+- Bump minimal compiler version to 0.15
+
 ## 0.8.2
 
 - Fix margin on abstract page
