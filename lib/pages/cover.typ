@@ -5,6 +5,7 @@
   is-master-thesis: false,
   is-bachelor-thesis: true,
   is-report: false,
+  is-expose: false,
   title: "",
   author: "",
   faculty: "",
@@ -35,12 +36,15 @@
     right: 18mm,
     stack(
       // Type
-      if is-thesis {
-        let thesis-title = translations.bachelor-thesis
+      if is-thesis or is-expose {
+        let document-kind = translations.bachelor-thesis
         if is-master-thesis {
-          thesis-title = translations.master-thesis
+          document-kind = translations.master-thesis
         }
-        upper(text(thesis-title, size: 9pt, weight: "bold"))
+        if is-expose {
+          document-kind = translations.expose
+        }
+        upper(text(document-kind, size: 9pt, weight: "bold"))
         v(2mm)
       },
       // Author
@@ -77,7 +81,7 @@
     ),
   )
 
-  if (is-report) {
+  if (is-report or is-expose) {
     set text(size: 11pt)
     place(
       left + top,
@@ -114,7 +118,6 @@
       ),
     )
   }
-
 
   if is-thesis {
     // Second cover page

@@ -25,6 +25,14 @@
     en: "Master thesis",
     de: "Masterarbeit",
   ),
+  expose: value(
+    en: "Proposal",
+    de: "Exposé",
+  ),
+  keywords: value(
+    en: "Keywords",
+    de: "Stichworte",
+  ),
   faculty-of: value(
     en: "Faculty of",
     de: "Fakultät",
