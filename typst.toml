@@ -1,5 +1,5 @@
 [package]
-version = "0.9.0"
+version = "0.10.0"
 compiler = "0.15.0"
 authors = ["Lasse Rosenow"]
 license = "MIT"
