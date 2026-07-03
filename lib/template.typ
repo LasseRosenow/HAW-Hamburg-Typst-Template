@@ -32,8 +32,18 @@
     title = title-en
   }
 
+  let keywords = keywords-de
+  if language == "en" {
+    keywords = keywords-en
+  }
+
   // Set the document's basic properties.
-  set document(author: author, title: title, date: submission-date)
+  set document(
+    author: author,
+    title: title,
+    date: submission-date,
+    keywords: if keywords == none { () } else { keywords },
+  )
   set page(
     margin: (left: 31.5mm, right: 31.5mm, top: PAGE_MARGIN_TOP, bottom: 56mm),
     numbering: "i",
