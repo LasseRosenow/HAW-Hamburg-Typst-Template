@@ -67,6 +67,22 @@ To use this package just add the following code to your [Typst](https://github.c
 )
 ```
 
+### Exposé
+
+```typst
+#import "@preview/haw-hamburg:0.9.0": expose
+
+#show: expose.with(
+  language: "en",
+  title: "Example title",
+  keywords: ("Keyword", "Important", "Super"),
+  author: "Example author",
+  faculty: "Computer Science and Digital Society",
+  supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
+  submission-date: datetime(year: 1948, month: 12, day: 10),
+)
+```
+
 ## How to Compile
 
 This project contains an example setup that splits individual chapters into different files.\
@@ -90,3 +106,4 @@ Examples can be found inside of the [examples](https://github.com/LasseRosenow/H
 - For Bachelor  theses see: [Bachelor thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/bachelor-thesis)
 - For Master theses see: [Master thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/master-thesis)
 - For reports see: [Report example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/report)
+- For exposés see: [Expose example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/expose)
