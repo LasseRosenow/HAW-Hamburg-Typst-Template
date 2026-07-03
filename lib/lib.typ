@@ -19,6 +19,7 @@
     is-master-thesis: false,
     is-bachelor-thesis: false,
     is-report: true,
+    is-expose: false,
 
     language: language,
 
@@ -60,6 +61,7 @@
     is-bachelor-thesis: false,
     is-report: false,
     is-expose: true,
+
     language: language,
 
     title-de: title,
@@ -104,6 +106,7 @@
     is-master-thesis: false,
     is-bachelor-thesis: true,
     is-report: false,
+    is-expose: false,
 
     language: language,
 
@@ -149,6 +152,7 @@
     is-master-thesis: true,
     is-bachelor-thesis: false,
     is-report: false,
+    is-expose: false,
 
     language: language,
 
