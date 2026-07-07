@@ -12,10 +12,25 @@
   }
 }
 
+#let month-names-de = (
+  "Januar",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember",
+)
+
 #let translations = (
   submission-date-format: date => value(
     en: date.display("[month repr:long] [day], [year]"),
-    de: date.display("[day]. [month repr:long] [year]"),
+    de: date.display("[day]. ") + month-names-de.at(date.month() - 1) + date.display(" [year]"),
   ),
   bachelor-thesis: value(
     en: "Bachelor thesis",
@@ -24,6 +39,14 @@
   master-thesis: value(
     en: "Master thesis",
     de: "Masterarbeit",
+  ),
+  expose: value(
+    en: "Proposal",
+    de: "Exposé",
+  ),
+  keywords: value(
+    en: "Keywords",
+    de: "Stichworte",
   ),
   faculty-of: value(
     en: "Faculty of",

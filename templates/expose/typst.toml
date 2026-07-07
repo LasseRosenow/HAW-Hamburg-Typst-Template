@@ -1,0 +1,10 @@
+[package]
+name = "haw-hamburg-expose"
+entrypoint = "lib.typ"
+description = "Unofficial template for writing an exposé (thesis proposal) in the HAW Hamburg Faculty of Computer Science and Digital Society style."
+categories = ["report"]
+
+[template]
+path = "src"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"

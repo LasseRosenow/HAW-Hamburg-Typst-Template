@@ -1,28 +1,20 @@
 # HAW Hamburg Typst Template
 
-This is an **`unofficial`** template for writing a bachelor thesis in the `HAW Hamburg` Faculty of `Computer Science and Digital Society` style using [Typst](https://github.com/typst/typst).
+This is an **`unofficial`** template for writing an exposé (thesis proposal) in the `HAW Hamburg` Faculty of `Computer Science and Digital Society` style using [Typst](https://github.com/typst/typst).
 
 ## Usage
 
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.10.0": bachelor-thesis
+#import "@preview/haw-hamburg:0.10.0": expose
 
-#show: bachelor-thesis.with(
+#show: expose.with(
   language: "en",
-
-  title-de: "Beispiel Titel",
-  keywords-de: ("Stichwort", "Wichtig", "Super"),
-  abstract-de: "Beispiel Zusammenfassung",
-
-  title-en: "Example title",
-  keywords-en:  ("Keyword", "Important", "Super"),
-  abstract-en: "Example abstract",
-
+  title: "Example title",
+  keywords: ("Keyword", "Important", "Super"),
   author: "Example author",
   faculty: "Computer Science and Digital Society",
-  study-course: "Bachelor of Science Informatik Technischer Systeme",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
   submission-date: datetime(year: 1948, month: 12, day: 10),
 )

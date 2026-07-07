@@ -9,7 +9,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.9.0": report
+#import "@preview/haw-hamburg:0.10.0": report
 
 #show: report.with(
   language: "en",
@@ -22,7 +22,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Bachelor Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.9.0": bachelor-thesis
+#import "@preview/haw-hamburg:0.10.0": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -46,7 +46,7 @@ To use this package just add the following code to your [Typst](https://github.c
 ### Master Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.9.0": master-thesis
+#import "@preview/haw-hamburg:0.10.0": master-thesis
 
 #show: master-thesis.with(
   language: "en",
@@ -67,6 +67,22 @@ To use this package just add the following code to your [Typst](https://github.c
 )
 ```
 
+### Exposé
+
+```typst
+#import "@preview/haw-hamburg:0.10.0": expose
+
+#show: expose.with(
+  language: "en",
+  title: "Example title",
+  keywords: ("Keyword", "Important", "Super"),
+  author: "Example author",
+  faculty: "Computer Science and Digital Society",
+  supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
+  submission-date: datetime(year: 1948, month: 12, day: 10),
+)
+```
+
 ## Examples
 
 Examples can be found inside of the [examples](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples) directory
@@ -74,3 +90,4 @@ Examples can be found inside of the [examples](https://github.com/LasseRosenow/H
 - For Bachelor  theses see: [Bachelor thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/bachelor-thesis)
 - For Master theses see: [Master thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/master-thesis)
 - For reports see: [Report example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/report)
+- For exposés see: [Expose example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/expose)

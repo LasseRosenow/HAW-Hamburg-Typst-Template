@@ -3,6 +3,7 @@
   is-master-thesis: false,
   is-bachelor-thesis: true,
   is-report: false,
+  is-expose: false,
   // Language
   language: "en",
   // German
@@ -31,8 +32,18 @@
     title = title-en
   }
 
+  let keywords = keywords-de
+  if language == "en" {
+    keywords = keywords-en
+  }
+
   // Set the document's basic properties.
-  set document(author: author, title: title, date: submission-date)
+  set document(
+    author: author,
+    title: title,
+    date: submission-date,
+    keywords: if keywords == none { () } else { keywords },
+  )
   set page(
     margin: (left: 31.5mm, right: 31.5mm, top: PAGE_MARGIN_TOP, bottom: 56mm),
     numbering: "i",
@@ -152,6 +163,7 @@
     is-master-thesis: is-master-thesis,
     is-bachelor-thesis: is-bachelor-thesis,
     is-report: is-report,
+    is-expose: is-expose,
 
     title: title,
     author: author,
@@ -211,6 +223,18 @@
     counter(page).update(1)
 
     set par(justify: true)
+
+    // Keywords are expose only, as it has no abstract page
+    if is-expose and keywords != none {
+      import "translations.typ": translations
+      let keywords-text = if type(keywords) == array {
+        keywords.join(", ")
+      } else {
+        keywords
+      }
+      text(translations.keywords + ": " + keywords-text, weight: "bold")
+      v(5mm)
+    }
 
     body
 

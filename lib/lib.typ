@@ -19,6 +19,7 @@
     is-master-thesis: false,
     is-bachelor-thesis: false,
     is-report: true,
+    is-expose: false,
 
     language: language,
 
@@ -28,6 +29,47 @@
 
     title-en: title,
     keywords-en: none,
+    abstract-en: none,
+
+    author: author,
+    faculty: faculty,
+    study-course: none,
+    supervisors: supervisors,
+    submission-date: submission-date,
+    before-content: before-content,
+    after-content: after-content,
+    body,
+  )
+}
+
+#let expose(
+  language: "en",
+  title: "",
+  keywords: none,
+  author: "",
+  faculty: "",
+  supervisors: (),
+  submission-date: none,
+  before-content: none,
+  after-content: none,
+  body,
+) = {
+  import "template.typ": template
+  template(
+    is-thesis: false,
+    is-master-thesis: false,
+    is-bachelor-thesis: false,
+    is-report: false,
+    is-expose: true,
+
+    language: language,
+
+    title-de: title,
+    keywords-de: keywords,
+    abstract-de: none,
+
+    title-en: title,
+    keywords-en: keywords,
     abstract-en: none,
 
     author: author,
@@ -64,6 +106,7 @@
     is-master-thesis: false,
     is-bachelor-thesis: true,
     is-report: false,
+    is-expose: false,
 
     language: language,
 
@@ -109,6 +152,7 @@
     is-master-thesis: true,
     is-bachelor-thesis: false,
     is-report: false,
+    is-expose: false,
 
     language: language,
 
