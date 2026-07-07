@@ -1,16 +1,14 @@
 # Changelog
 
-## 0.10.0
+## 0.9.0
 
+- Huge thanks to @BennetKrz for the following changes!
 - Add `expose` template for writing an exposé (thesis proposal), mirroring the exposé support of the official HAW LaTeX termpaper template:
   - Cover page shows the document kind ("EXPOSÉ" / "PROPOSAL") above the author
   - No abstract and no declaration of independent processing
   - Optional `keywords` are printed at the beginning of the content
 - Fix German dates showing English month names
 - Add keywords as document property
-
-## 0.9.0
-
 - Optimize template internals
 - Bump minimal compiler version to 0.15
 

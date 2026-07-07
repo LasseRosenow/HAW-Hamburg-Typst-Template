@@ -7,7 +7,7 @@ This is an **`unofficial`** template for writing an exposé (thesis proposal) in
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.10.0": expose
+#import "@preview/haw-hamburg:0.9.0": expose
 
 #show: expose.with(
   language: "en",
