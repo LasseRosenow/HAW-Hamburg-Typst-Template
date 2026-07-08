@@ -101,9 +101,9 @@ These problems can be avoided by following these steps:
 
 ## Examples
 
-Examples can be found inside of the [examples](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples) directory
+Examples can be found inside of the [templates](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/templates) directory
 
-- For Bachelor  theses see: [Bachelor thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/bachelor-thesis)
-- For Master theses see: [Master thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/master-thesis)
-- For reports see: [Report example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/report)
-- For exposés see: [Expose example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/expose)
+- For Bachelor  theses see: [Bachelor thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/templates/bachelor-thesis/src)
+- For Master theses see: [Master thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/templates/master-thesis/src)
+- For reports see: [Report example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/templates/report/src)
+- For exposés see: [Expose example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/templates/expose/src)
