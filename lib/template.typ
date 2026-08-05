@@ -27,7 +27,7 @@
   table-of-contents: true,
   list-of-figures: true,
   list-of-tables: true,
-  listings: true
+  listings: true,
 ) = {
   let THESIS_HEADING_EXTRA_TOP_MARGIN = 70pt
   let PAGE_MARGIN_TOP = 37mm
