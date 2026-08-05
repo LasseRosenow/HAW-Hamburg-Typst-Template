@@ -23,6 +23,11 @@
   before-content: none,
   after-content: none,
   body,
+  // Content
+  table-of-contents: true,
+  list-of-figures: true,
+  list-of-tables: true,
+  listings: true
 ) = {
   let THESIS_HEADING_EXTRA_TOP_MARGIN = 70pt
   let PAGE_MARGIN_TOP = 37mm
@@ -196,20 +201,22 @@
   }
 
   // Table of contents.
-  include "pages/outline.typ"
+  if table-of-contents {
+    include "pages/outline.typ"
+  }
 
   // List of Figures
-  if is-thesis {
+  if list-of-figures {
     include "pages/list_of_figures.typ"
   }
 
   // List of Tables
-  if is-thesis {
+  if list-of-tables {
     include "pages/list_of_tables.typ"
   }
 
   // Listings
-  if is-thesis {
+  if listings {
     include "pages/listings.typ"
   }
 
