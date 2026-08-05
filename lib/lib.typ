@@ -39,6 +39,11 @@
     before-content: before-content,
     after-content: after-content,
     body,
+
+    table-of-contents: true,
+    list-of-figures: false,
+    list-of-tables: false,
+    listings: false,
   )
 }
 
@@ -80,6 +85,11 @@
     before-content: before-content,
     after-content: after-content,
     body,
+
+    table-of-contents: true,
+    list-of-figures: false,
+    list-of-tables: false,
+    listings: false,
   )
 }
 
@@ -126,6 +136,11 @@
     before-content: before-content,
     after-content: after-content,
     body,
+
+    table-of-contents: true,
+    list-of-figures: true,
+    list-of-tables: true,
+    listings: true,
   )
 }
 
@@ -172,5 +187,10 @@
     before-content: before-content,
     after-content: after-content,
     body,
+
+    table-of-contents: true,
+    list-of-figures: true,
+    list-of-tables: true,
+    listings: true,
   )
 }
