@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Make sections configurable: toc, lof, lot, listings (#11) Thanks @ceribus!
+
 ## 0.9.0
 
 - Huge thanks to @BennetKrz for the following changes!
