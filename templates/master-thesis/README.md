@@ -7,7 +7,7 @@ This is an **`unofficial`** template for writing a master thesis in the `HAW Ham
 To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
 
 ```typst
-#import "@preview/haw-hamburg:0.9.0": master-thesis
+#import "@preview/haw-hamburg:0.10.0": master-thesis
 
 #show: master-thesis.with(
   language: "en",
