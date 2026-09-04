@@ -2,7 +2,10 @@
 
 ## Unreleased
 
+## 0.10.0
+
 - Make sections configurable: toc, lof, lot, listings (#11) Thanks @ceribus!
+- Update declaration of independent work (#12) Thanks @motforp!
 
 ## 0.9.0
 
