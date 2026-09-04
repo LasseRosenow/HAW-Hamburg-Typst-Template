@@ -112,7 +112,7 @@ mit Produktnamen) angegeben.
 
 Ich verantworte die Übernahme jeglicher von mir verwendeter maschinell generierter
 Passagen vollumfänglich selbst und trage die Verantwortung für eventuell durch die KI
-generierte fehlerhafte oder verzerrte Inhalte, fehlerhafte Referenzen, Verstöÿe gegen das
+generierte fehlerhafte oder verzerrte Inhalte, fehlerhafte Referenzen, Verstöße gegen das
 Datenschutz- und Urheberrecht oder Plagiate.
 
 Mir ist bewusst, dass wahrheitswidrige Angaben als Täuschungsversuch behandelt werden können.",
