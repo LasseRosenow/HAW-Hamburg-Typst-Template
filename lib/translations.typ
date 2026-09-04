@@ -101,9 +101,21 @@
     de: "Erklärung zur selbstständigen Bearbeitung",
   ),
   declaration-of-independent-processing-content: value(
-    en: "I hereby certify that I wrote this work independently without any outside help and only used the resources specified. Passages taken literally or figuratively from other works are identified by citing the sources.",
-    de: "Hiermit versichere ich, dass ich die vorliegende Arbeit ohne fremde Hilfe selbständig verfasst und nur die angegebenen Hilfsmittel benutzt habe. Wörtlich oder dem Sinn
-nach aus anderen Werken entnommene Stellen sind unter Angabe der Quellen kenntlich gemacht.",
+    en: "I hereby declare that I have written this work independently in all its parts and have used no sources or aids other than those stated in the work. I have declared the AI-based tools used in my work (including product names where applicable).
+
+I accept full responsibility for the use of any machine-generated passages included by me, and I bear responsibility for any erroneous or distorted content, incorrect references, breaches of data protection or copyright law, or plagiarism produced by the AI.
+
+I am aware that untruthful statements may be treated as an attempt at deception.",
+    de: "Hiermit versichere ich, dass ich die vorliegende Arbeit in allen Teilen selbstständig angefertigt und keine anderen als die in der Arbeit angegebenen Quellen und Hilfsmittel
+benutzt habe. Die in meiner Arbeit verwendeten KI-basierten Hilfsmittel habe ich (ggf.
+mit Produktnamen) angegeben.
+
+Ich verantworte die Übernahme jeglicher von mir verwendeter maschinell generierter
+Passagen vollumfänglich selbst und trage die Verantwortung für eventuell durch die KI
+generierte fehlerhafte oder verzerrte Inhalte, fehlerhafte Referenzen, Verstöÿe gegen das
+Datenschutz- und Urheberrecht oder Plagiate.
+
+Mir ist bewusst, dass wahrheitswidrige Angaben als Täuschungsversuch behandelt werden können.",
   ),
   place: value(
     en: "Place",
