@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Always show title, keywords and abstract in both German and English (document language first)
+
 ## 0.10.0
 
 - Make sections configurable: toc, lof, lot, listings (#11) Thanks @ceribus!

@@ -181,23 +181,38 @@
   // Abstract
   if abstract-de != none or abstract-en != none {
     import "pages/abstract.typ": abstract_page
-    if (language == "en") {
-      abstract_page(
-        language: "en",
-        author: author,
-        title: title-en,
-        keywords: keywords-en,
-        abstract: abstract-en,
-      )
-      v(10mm)
-    }
-    abstract_page(
+    let page-de = (
       language: "de",
       author: author,
       title: title-de,
       keywords: keywords-de,
       abstract: abstract-de,
     )
+    let page-en = (
+      language: "en",
+      author: author,
+      title: title-en,
+      keywords: keywords-en,
+      abstract: abstract-en,
+    )
+
+    // Show both languages, the document language first.
+    let pages = if language == "en" { (page-en, page-de) } else { (page-de, page-en) }
+    // Skip a language if its content was not provided.
+    let pages = pages.filter(p => p.title != none and p.abstract != none)
+
+    for (i, p) in pages.enumerate() {
+      if i > 0 {
+        v(10mm)
+      }
+      abstract_page(
+        language: p.language,
+        author: author,
+        title: p.title,
+        keywords: p.keywords,
+        abstract: p.abstract,
+      )
+    }
   }
 
   // Table of contents.
