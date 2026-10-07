@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.10.0": expose
+#import "@preview/haw-hamburg:0.11.0": expose
 
 // Initialize template
 #show: expose.with(

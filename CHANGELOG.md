@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.11.0
 
-- Always show title, keywords and abstract in both German and English (document language first)
+- Always show title, keywords and abstract in both German and English (#13 and #14) Thanks @Tosch-IT and @UweKrause!
 
 ## 0.10.0
 
