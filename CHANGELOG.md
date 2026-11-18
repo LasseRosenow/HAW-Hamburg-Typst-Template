@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0
+
+- Make table captions appear above the actual table
+- Add an example appendix, with table styled as in the Latex template
+
 ## 0.11.0
 
 - Always show title, keywords and abstract in both German and English (#13 and #14) Thanks @Tosch-IT and @UweKrause!

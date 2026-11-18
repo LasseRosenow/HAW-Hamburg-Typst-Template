@@ -104,6 +104,9 @@
     numbering: "1.1",
   )
 
+  // Table figure configuration
+  show figure.where(kind: table): set figure.caption(position: top) if is-thesis
+
   // Heading Configuration
   let font_size = 10pt
   let top_margin = 0pt
