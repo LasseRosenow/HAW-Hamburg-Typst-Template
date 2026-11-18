@@ -51,7 +51,7 @@ Everyone is entitled in full equality to a fair and public hearing by an indepen
 
 #figure(caption: "Example figure", text("This is a figure"))
 
-And here comes another table. Note that the caption is on top?
+And here comes a table. Did you note that the caption is on top?
 
 #figure(
   table(
