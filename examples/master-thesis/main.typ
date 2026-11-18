@@ -59,6 +59,21 @@ ero, nonummy eget, consectetuer id, vulputate a, magna.",
     pagebreak(weak: true)
     bibliography("bibliography.bib", style: "../../lib/assets/ieeetran.csl")
 
+    // Appendix: chapters are lettered (A, A.1, A.2 etc.)
+    {
+      set heading(numbering: "A.1", supplement: [Appendix])
+      counter(heading).update(0)
+      // Figures and tables are numbered per appendix chapter (Figure A1, Table A1 etc.)
+      // Reset it
+      show heading.where(level: 1): it => {
+        for kind in (image, table, raw) { counter(figure.where(kind: kind)).update(0) }
+        it
+      }
+      // Build new numbering scheme
+      set figure(numbering: n => numbering("A", counter(heading).get().first()) + str(n))
+      include "chapters/appendix.typ"
+    }
+
     // Declaration of independent processing (comment out to remove)
     declaration-of-independent-processing
   },
